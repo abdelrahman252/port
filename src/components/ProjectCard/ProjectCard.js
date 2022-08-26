@@ -15,12 +15,12 @@ export const ProjectCard = ({ title, description, imgUrl, Glink, Llink }) => {
 
         <div className="links">
           <div className="left">
-            <a href={Glink} target="_blank">
+            <a href={Glink} target="_blank" rel="noopener noreferrer">
               <Github size={40} />
             </a>
           </div>
           <div className="right">
-            <a href={Llink} target="_blank">
+            <a href={Llink} target="_blank" rel="noopener noreferrer">
               <Globe size={40} />
             </a>
           </div>
