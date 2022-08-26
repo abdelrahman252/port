@@ -170,8 +170,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border-color: transparent;
 }
+
 @media (max-width: 767px) {
     nav.navbar a.navbar-brand {
         width: 20%;
+    }
+
+    nav.navbar {
+        background-color: #121212;
     }
 }

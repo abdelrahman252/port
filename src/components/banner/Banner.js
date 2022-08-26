@@ -58,7 +58,7 @@ import "./banner.css"
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Abdelrahman`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`Hi! I'm Abdelrahman♡`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Hello! My name is Abdelrahman Ahmed. I am a self-taught web developer who is passionate about programming in general and especially web development.</p>
                   <a href="#Contact">Let’s Connect <ArrowRightCircle size={25} /></a>
               </div>}

@@ -62,9 +62,48 @@
     transition: 0.3s ease-in-out;
 }
 
-.project .nav.nav-pills .nav-link:hover::before {
+.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.load {
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 10px;
+    transition: all .3s linear;
+}
+
+.project .load::before {
+    border-radius: 10px;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+    scale: 0.5;
+}
+
+.load:hover::before {
+    scale: 1;
     width: 100% !important;
 
+}
+
+.load:hover {
+    scale: 1;
+}
+
+.project .nav.nav-pills .nav-link:hover::before {
+    width: 100% !important;
 }
 
 .project .nav.nav-pills .nav-link.active::before {
@@ -110,7 +149,7 @@
         border-radius: 0;
     }
 
-   
+
 
     .nav-link#projects-tabs-tab-third {
         border-radius: 0;
