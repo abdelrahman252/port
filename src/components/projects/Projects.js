@@ -140,11 +140,19 @@ const Projects = () => {
   ];
 
   const [loadmore, setloadmore] = useState(3);
+  const [loadmore2, setloadmore2] = useState(3);
+  const [loadmore3, setloadmore3] = useState(3);
   const slice = Reprojects.slice(0, loadmore);
-  const slice2 = JSprojects.slice(0, loadmore);
-  const slice3 = Landprojects.slice(0, loadmore);
+  const slice2 = JSprojects.slice(0, loadmore2);
+  const slice3 = Landprojects.slice(0, loadmore3);
   const moreLoad = () => {
     setloadmore(loadmore + loadmore);
+  };
+  const moreLoad2 = () => {
+    setloadmore2(loadmore2 + loadmore2);
+  };
+  const moreLoad3 = () => {
+    setloadmore3(loadmore3 + loadmore3);
   };
   return (
     <section className="project" id="projects">
@@ -213,7 +221,7 @@ const Projects = () => {
                         })}
                       </Row>
                       <div className="more">
-                        <button onClick={() => moreLoad()} className="load">
+                        <button onClick={() => moreLoad2()} className="load">
                           Load More
                         </button>
                       </div>
@@ -225,7 +233,7 @@ const Projects = () => {
                         })}
                       </Row>
                       <div className="more">
-                        <button onClick={() => moreLoad()} className="load">
+                        <button onClick={() => moreLoad3()} className="load">
                           Load More
                         </button>
                       </div>
