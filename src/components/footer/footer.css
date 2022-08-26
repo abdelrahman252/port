@@ -5,16 +5,16 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
 
 .newsletter-bx {
     background: #FFFFFF;
-  border-radius: 55px;
-  color: #121212;
-  padding: 85px 125px;
-  margin-bottom: 80px;
-  margin-top: -122px;
+    border-radius: 55px;
+    color: #121212;
+    padding: 85px 125px;
+    margin-bottom: 80px;
+    margin-top: -122px;
 }
 
 .newsletter-bx h3 {
@@ -73,6 +73,11 @@
     font-weight: 500;
     letter-spacing: 0.5px;
     border-radius: 18px;
+    transition: all .3s linear;
+}
+
+.new-email-bx button:hover {
+    transform: translateX(15px);
 }
 
 .footer img {
@@ -92,7 +97,7 @@
     .newsletter-bx h3 {
         text-align: start;
         margin: 10px 0;
-        padding: 0 ;
+        padding: 0;
 
     }
 
@@ -109,10 +114,12 @@
     .bot {
         text-align: center;
     }
+
     .new-email-bx button {
         padding: 20px 10px;
-       
+
     }
+
     .footer img {
         width: 40%;
     }

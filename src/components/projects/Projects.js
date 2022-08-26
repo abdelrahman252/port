@@ -167,13 +167,7 @@ const Projects = () => {
                   }
                 >
                   <h2>Projects</h2>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
+                  <p>Built with patience and hard work</p>
                 </div>
               )}
             </TrackVisibility>
@@ -199,7 +193,7 @@ const Projects = () => {
                   <Tab.Content
                     id="slideInUp"
                     className={
-                      isVisible ? "animate__animated animate__fadeInLeft" : ""
+                      isVisible ? "animate__animated animate__backInLeft" : ""
                     }
                   >
                     <Tab.Pane eventKey="first">
@@ -208,12 +202,14 @@ const Projects = () => {
                           return <ProjectCard key={index} {...project} />;
                         })}
                       </Row>
+
                       <div className="more">
                         <button onClick={() => moreLoad()} className="load">
                           Load More
                         </button>
                       </div>
                     </Tab.Pane>
+
                     <Tab.Pane eventKey="second">
                       <Row>
                         {slice2.map((project, index) => {

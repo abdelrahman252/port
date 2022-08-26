@@ -50,7 +50,7 @@
 
 .contact form .submit {
     font-weight: 700;
-    color: #000 ;
+    color: #000;
     background-color: #fff;
     padding: 14px 48px;
     font-size: 18px;
@@ -58,8 +58,10 @@
     transition: all 0.3s ease-in-out;
     margin: 20px auto;
     border: none;
-    
+
 }
+
+
 
 @-webkit-keyframes hvr-buzz {
     50% {
@@ -85,13 +87,6 @@
     }
 }
 
-/* .hvr-buzz {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-} */
 
 .submit:hover {
     -webkit-animation-name: hvr-buzz;

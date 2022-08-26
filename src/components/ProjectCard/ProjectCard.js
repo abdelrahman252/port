@@ -5,7 +5,7 @@ import "./ProjectCard.css";
 export const ProjectCard = ({ title, description, imgUrl, Glink, Llink }) => {
   return (
     <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx">
+      <div className="proj-imgbx" >
         <img src={imgUrl} alt={title} />
 
         <div className="proj-txtx">

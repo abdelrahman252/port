@@ -62,7 +62,7 @@ const Banner = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
+                    isVisible ? "animate__animated animate__rollIn" : ""
                   }
                 >
                   <span className="tagline">Welcome to my Portfolio</span>
@@ -93,7 +93,7 @@ const Banner = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
+                    isVisible ? "animate__animated animate__rollIn" : ""
                   }
                 >
                   <img src={headerImg} alt="Header Img" />

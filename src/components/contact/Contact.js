@@ -4,13 +4,15 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import "./contact.css";
 import emailjs from "emailjs-com";
+import { useState } from "react";
 
 const Contact = () => {
+  const [val, setVal] = useState("Send");
   const btn = document.getElementById("button");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    btn.value = "Sending...";
+    setVal("Sending...");
     emailjs
       .sendForm(
         "service_96zcp44",
@@ -19,18 +21,33 @@ const Contact = () => {
         "xOB280Hm7-8shfZNJ"
       )
       .then(() => {
-        btn.value = "Sent Successfully! 𓆩♡𓆪";
+        setVal("Sent Successfully! 𓆩♡𓆪");
         btn.style.background = "green";
+        clearFields();
         setTimeout(() => {
-          btn.value = "Send";
+          setVal("Send");
           btn.style.background = "white";
         }, 3000);
       })
       .catch((err) => {
-        btn.value = "Send Again";
+        setTimeout(() => {
+          setVal("Send Again");
+          btn.style.background = "red";
+        }, 3000);
       });
   };
-
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [secName, setSecName] = useState("");
+  const [number, setNumber] = useState("");
+  const [message, setMessage] = useState("");
+  const clearFields = () => {
+    setFirstName("");
+    setSecName("");
+    setNumber("");
+    setEmail("");
+    setMessage("");
+  };
   return (
     <section className="contact" id="Contact">
       <Container>
@@ -53,7 +70,7 @@ const Contact = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
+                    isVisible ? "animate__animated animate__backInRight" : ""
                   }
                 >
                   <h2>Get In Touch</h2>
@@ -61,6 +78,8 @@ const Contact = () => {
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
+                          value={firstName}
+                          onChange={(e) => setFirstName(e.target.value)}
                           type="text"
                           placeholder="First Name"
                           name="name"
@@ -69,6 +88,8 @@ const Contact = () => {
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
+                          value={secName}
+                          onChange={(e) => setSecName(e.target.value)}
                           type="text"
                           placeholder="Last Name"
                           name="name"
@@ -77,6 +98,8 @@ const Contact = () => {
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
                           type="email"
                           placeholder="Email Address"
                           name="user_email"
@@ -85,6 +108,8 @@ const Contact = () => {
                       </Col>
                       <Col size={12} sm={6} className="px-1">
                         <input
+                          value={number}
+                          onChange={(e) => setNumber(e.target.value)}
                           type="tel"
                           placeholder="Phone No."
                           name="phone"
@@ -93,6 +118,8 @@ const Contact = () => {
                       </Col>
                       <Col size={12} className="px-1">
                         <textarea
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
                           rows="6"
                           placeholder="Message"
                           name="message"
@@ -101,7 +128,7 @@ const Contact = () => {
                           type="submit"
                           id="button"
                           className="submit"
-                          value="Send"
+                          value={val}
                         />
                       </Col>
                       {/* {
