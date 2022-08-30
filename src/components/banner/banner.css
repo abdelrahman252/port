@@ -26,6 +26,11 @@
     line-height: 1;
     margin-bottom: 20px;
     display: block;
+    z-index: 10000;
+}
+
+.txt-rotate {
+    z-index: 10000;
 }
 
 .banner p {
@@ -65,7 +70,7 @@
 
 .banner img {
     animation: updown 3s linear infinite;
-
+    z-index: -1000;
 }
 
 @keyframes updown {
@@ -83,12 +88,15 @@
 }
 
 .txt-rotate>.wrap {
-    border-right: 0.08em solid #666;
+    border-right: 0.08em solid rgba(117, 39, 86, 0.5);
+    z-index: 10000;
 }
+
 
 @media (max-width: 767px) {
     .banner {
-        padding-top: 90px;
+        padding-top: 150px;
+
     }
 
     .banner h1 {

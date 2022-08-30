@@ -124,3 +124,8 @@
         width: 40%;
     }
 }
+@media (max-width:1023px) {
+    .footer img {
+        width: 40%;
+    }
+}

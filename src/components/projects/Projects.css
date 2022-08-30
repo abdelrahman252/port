@@ -2,7 +2,7 @@
 .project {
     padding: 80px 0;
     position: relative;
-    background-color: black;
+    background-color: #111;
 }
 
 .project h2 {
@@ -30,7 +30,7 @@
 }
 
 .project .nav.nav-pills .nav-item {
-    width: 33.33333%;
+    width: 20%;
 }
 
 
@@ -120,11 +120,20 @@
 }
 
 .nav-link#projects-tabs-tab-second {
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .nav-link#projects-tabs-tab-third {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.nav-link#projects-tabs-tab-forth {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.nav-link#projects-tabs-tab-fifth {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 0 55px 55px 0;
 }
@@ -134,7 +143,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        border-radius: 0;
+        border-radius: 0 !important;
     }
 
     .project .nav.nav-pills .nav-item {
@@ -149,9 +158,7 @@
         border-radius: 0;
     }
 
-
-
-    .nav-link#projects-tabs-tab-third {
+    .nav-link#projects-tabs-tab-fifth {
         border-radius: 0;
     }
 
@@ -163,9 +170,45 @@
     }
 }
 
-@media (max-width: 567px) {
+
+
+@media (max-width: 767px) {
+   
+    .project .nav.nav-pills {
+        width: 101% !important;
+        border-radius: 0;
+
+    }
+
+    .project .nav.nav-pills {
+        border-radius: 50px;
+    }
+
+    .project .nav.nav-pills .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       height: 70px !important;
+    }
+
+    .project .nav.nav-pills .nav-link.active {
+        border: 1px solid rgba(255, 255, 255, 1) !important;
+    }
+}
+
+
+@media (max-width: 1023px) {
     .project .nav.nav-pills {
         width: 100%;
         border-radius: 0;
+        height: fit-content;
+    }
+
+    .project .nav.nav-pills {
+        border-radius: 50px;
+    }
+
+    .project .nav.nav-pills .nav-link.active {
+        border: 1px solid rgba(255, 255, 255, 1) !important;
     }
 }

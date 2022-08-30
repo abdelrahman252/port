@@ -35,54 +35,45 @@ const Skills = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeInRight" : ""
-                  }
+            <div>
+              <div className="skill-bx" data-wow-delay="0.3s">
+                <h2>Skills</h2>
+                <p>
+                  You can't use up creativity . <br></br>
+                  The more you use , the more you have in your significant mind.
+                </p>
+                <Carousel
+                  responsive={responsive}
+                  infinite={true}
+                  className="owl-carousel owl-theme skill-slider"
                 >
-                  <div className="skill-bx" data-wow-delay="0.3s">
-                    <h2>Skills</h2>
-                    <p>
-                      You can't use up creativity . <br></br>
-                      The more you use , the more you have in your significant
-                      mind.
-                    </p>
-                    <Carousel
-                      responsive={responsive}
-                      infinite={true}
-                      className="owl-carousel owl-theme skill-slider"
-                    >
-                      <div className="item">
-                        <img src={meter1} alt="Imag" />
-                        <h5>HTML-HTML5</h5>
-                      </div>
-                      <div className="item">
-                        <img src={meter3} alt="Imag" />
-                        <h5>CSS-CSS3</h5>
-                      </div>
-                      <div className="item">
-                        <img src={meter2} alt="Imag" />
-                        <h5>SASS</h5>
-                      </div>
-                      <div className="item">
-                        <img src={meter2} alt="Imag" />
-                        <h5>JS</h5>
-                      </div>
-                      <div className="item">
-                        <img src={meter2} alt="Imag" />
-                        <h5>Bootstrap</h5>
-                      </div>
-                      <div className="item">
-                        <img src={meter2} alt="Imag" />
-                        <h5>React js</h5>
-                      </div>
-                    </Carousel>
+                  <div className="item">
+                    <img src={meter1} alt="Imag" />
+                    <h5>HTML-HTML5</h5>
                   </div>
-                </div>
-              )}
-            </TrackVisibility>
+                  <div className="item">
+                    <img src={meter3} alt="Imag" />
+                    <h5>CSS-CSS3</h5>
+                  </div>
+                  <div className="item">
+                    <img src={meter2} alt="Imag" />
+                    <h5>SASS</h5>
+                  </div>
+                  <div className="item">
+                    <img src={meter2} alt="Imag" />
+                    <h5>JS</h5>
+                  </div>
+                  <div className="item">
+                    <img src={meter2} alt="Imag" />
+                    <h5>Bootstrap</h5>
+                  </div>
+                  <div className="item">
+                    <img src={meter2} alt="Imag" />
+                    <h5>React js</h5>
+                  </div>
+                </Carousel>
+              </div>
+            </div>
           </div>
         </div>
       </div>

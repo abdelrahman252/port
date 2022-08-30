@@ -3,6 +3,9 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "../ProjectCard/ProjectCard";
 
 import porto from "../../assets/img/PORTO.PNG";
+import shopping from "../../assets/img/shopping.PNG";
+
+import ai from "../../assets/img/ai.PNG";
 import admin from "../../assets/img/admin.PNG";
 import booking from "../../assets/img/booking.PNG";
 import mui from "../../assets/img/mui.PNG";
@@ -17,6 +20,9 @@ import era from "../../assets/img/era.PNG";
 import telsa from "../../assets/img/tesla.PNG";
 import tiktok from "../../assets/img/tiktok.PNG";
 import crypto from "../../assets/img/crypto.PNG";
+import wordpress from "../../assets/img/wordpress.PNG";
+import wordpress2 from "../../assets/img/wordpress2.PNG";
+import quiz from "../../assets/img/quiz.PNG";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -82,6 +88,20 @@ const Projects = () => {
       Glink: "https://github.com/abdelrahman252/crypto-hunting",
       Llink: "https://crypto-hunting-abdo.netlify.app/",
     },
+    {
+      title: "Quiz-App Startup",
+      description: "Design & Development",
+      imgUrl: quiz,
+      Glink: "https://github.com/abdelrahman252/quizz",
+      Llink: "https://quizhub-abdo.netlify.app/",
+    },
+    {
+      title: "Shopping Startup",
+      description: "Design & Development",
+      imgUrl: shopping,
+      Glink: "https://github.com/abdelrahman252/cart",
+      Llink: "https://shopp-ing.netlify.app",
+    },
   ];
 
   const JSprojects = [
@@ -138,6 +158,31 @@ const Projects = () => {
       Llink: "https://abdelrahman252.github.io/robots/",
     },
   ];
+  const pressProjects = [
+    {
+      title: "E-Commerce Startup",
+      description: "Design & Development",
+      imgUrl: wordpress2,
+      Glink: "https://github.com/abdelrahman252/",
+      Llink: "https://solvest.org/",
+    },
+    {
+      title: "E-Commerce Startup",
+      description: "Design & Development",
+      imgUrl: wordpress,
+      Glink: "https://github.com/abdelrahman252/",
+      Llink: "https://tachodx.net/",
+    },
+  ];
+  const googleProjects = [
+    {
+      title: "Ai-intro Startup",
+      description: "Design & Development",
+      imgUrl: ai,
+      Glink: "https://github.com/abdelrahman252/",
+      Llink: "https://sites.google.com/view/aitachodx/ai",
+    },
+  ];
 
   const [loadmore, setloadmore] = useState(3);
   const [loadmore2, setloadmore2] = useState(3);
@@ -175,17 +220,23 @@ const Projects = () => {
               <Nav
                 size={12}
                 variant="pills"
-                className="nav-pills mb-5 justify-content-center align-items-center"
+                className="nav-pills mb-5 justify-content-between align-items-center"
                 id="pills-tab"
               >
-                <Nav.Item sm={6} md={4}>
+                <Nav.Item sm={6} md={6}>
                   <Nav.Link eventKey="first">React js</Nav.Link>
                 </Nav.Item>
-                <Nav.Item sm={6} md={4}>
+                <Nav.Item sm={6} md={6}>
                   <Nav.Link eventKey="second">JavaScript</Nav.Link>
                 </Nav.Item>
-                <Nav.Item sm={6} md={4}>
+                <Nav.Item sm={6} md={6}>
                   <Nav.Link eventKey="third">Landing Pages</Nav.Link>
+                </Nav.Item>
+                <Nav.Item sm={6} md={6}>
+                  <Nav.Link eventKey="forth">WordPress </Nav.Link>
+                </Nav.Item>
+                <Nav.Item sm={6} md={6}>
+                  <Nav.Link eventKey="fifth">Google Sites </Nav.Link>
                 </Nav.Item>
               </Nav>
               <TrackVisibility>
@@ -233,6 +284,20 @@ const Projects = () => {
                           Load More
                         </button>
                       </div>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="forth">
+                      <Row>
+                        {pressProjects.map((project, index) => {
+                          return <ProjectCard key={index} {...project} />;
+                        })}
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="fifth">
+                      <Row>
+                        {googleProjects.map((project, index) => {
+                          return <ProjectCard key={index} {...project} />;
+                        })}
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 )}

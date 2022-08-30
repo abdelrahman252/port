@@ -58,42 +58,34 @@ const Banner = () => {
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7} index={index}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__rollIn" : ""
-                  }
+            <div>
+              <span className="tagline">Welcome to my Portfolio</span>
+              <h1>
+                {`Hi! I'm Abdelrahman♡`}{" "}
+                <span
+                  className="txt-rotate"
+                  dataPeriod="1000"
+                  data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
                 >
-                  <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>
-                    {`Hi! I'm Abdelrahman♡`}{" "}
-                    <span
-                      className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
-                    >
-                      <span className="wrap">{text}</span>
-                    </span>
-                  </h1>
-                  <p>
-                    Hello! My name is Abdelrahman Ahmed. I am a self-taught web
-                    developer who is passionate about programming in general and
-                    especially web development.
-                  </p>
-                  <a href="#Contact">
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </a>
-                </div>
-              )}
-            </TrackVisibility>
+                  <span className="wrap">{text}</span>
+                </span>
+              </h1>
+              <p>
+                Hello! My name is Abdelrahman Ahmed. I am a self-taught web
+                developer who is passionate about programming in general and
+                especially web development.
+              </p>
+              <a href="#Contact">
+                Let’s Connect <ArrowRightCircle size={25} />
+              </a>
+            </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__rollIn" : ""
+                    isVisible ? "iamge animate__animated animate__rollIn" : ""
                   }
                 >
                   <img src={headerImg} alt="Header Img" />
