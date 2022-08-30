@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../../assets/img/color-sharp.png";
 import "./skills.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import TrackVisibility from "react-on-screen";
+
 
 const Skills = () => {
   const responsive = {
