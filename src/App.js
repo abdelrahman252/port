@@ -7,7 +7,7 @@ import Footer from "./components/footer/Footer";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ScrollToTop from "./components/scrollTop/ScrollToTop";
 
 function App() {
