@@ -23,6 +23,7 @@ import crypto from "../../assets/img/crypto.PNG";
 import wordpress from "../../assets/img/wordpress.PNG";
 import wordpress2 from "../../assets/img/wordpress2.PNG";
 import quiz from "../../assets/img/quiz.PNG";
+import movies from "../../assets/img/movies.PNG";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -101,6 +102,13 @@ const Projects = () => {
       imgUrl: shopping,
       Glink: "https://github.com/abdelrahman252/cart",
       Llink: "https://shopp-ing.netlify.app",
+    },
+    {
+      title: "Movies Startup",
+      description: "Design & Development",
+      imgUrl: movies,
+      Glink: "https://github.com/abdelrahman252/movies",
+      Llink: "https://movies-hub-abdo.netlify.app",
     },
   ];
 

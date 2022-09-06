@@ -20,10 +20,22 @@
         position: fixed;
         top: 0;
         left: 0;
+
         background-color: #121212;
-        z-index: 10000000;
         display: flex;
         align-items: center;
+      }
+      #spinner {
+        display: grid;
+        place-items: center;
+        margin-top: 5%;
+      }
+      #spinner img {
+        width: 200px;
+        height: 200px;
+
+        animation: ro 0.9s infinite;
+        z-index: 9999999999999999999;
       }
 
       .loading .cont {
@@ -59,16 +71,24 @@
           transform: translateY(-20px);
         }
       }
+      @keyframes ro {
+        to {
+          transform: rotate(360deg);
+        }
+      }
     </style>
     <title>My Page</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="loading" id="spinner">
-      <div class="cont">
-        <div class="one"></div>
-        <div class="two"></div>
-        <div class="three"></div>
+    <div id="spinner">
+      <img src="./logo_transparent.png" alt="" />
+      <div class="loading">
+        <div class="cont">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
       </div>
     </div>
 

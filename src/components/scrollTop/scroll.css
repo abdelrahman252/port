@@ -1,0 +1,15 @@
+.btn {
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999999999999999;
+
+}
+
