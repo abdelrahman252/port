@@ -81,6 +81,7 @@ const Contact = () => {
                           value={firstName}
                           onChange={(e) => setFirstName(e.target.value)}
                           type="text"
+                          required
                           placeholder="First Name"
                           name="name"
                           className="form-int"
@@ -94,6 +95,7 @@ const Contact = () => {
                           placeholder="Last Name"
                           name="name"
                           className="form-int"
+                          required
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
@@ -104,6 +106,7 @@ const Contact = () => {
                           placeholder="Email Address"
                           name="user_email"
                           className="form-int"
+                          required
                         />
                       </Col>
                       <Col size={12} sm={6} className="px-1">
