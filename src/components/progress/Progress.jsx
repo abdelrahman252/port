@@ -3,28 +3,27 @@ import "./progress.css";
 
 const Progress = ({ endValue, text }) => {
   const [style, setStyle] = useState({});
-  const [donestate, setDoneState] = useState(0);
-  const [degState, setDegstate] = useState(0);
+  const [doneState, setDoneState] = useState(0);
+  const [degState, setDegState] = useState(0);
   const [progressStartValue, setProgressStartValue] = useState(0);
   useEffect(() => {
-    let pro = setInterval(() => {
-      setDoneState(progressStartValue);
-      setDegstate(progressStartValue * 3.6);
-      let newStyle = {
-        background: ` conic-gradient(#AA367C ${degState}deg , #4A2FBD 0deg) `,
-      };
-      setStyle(newStyle);
-      setProgressStartValue((progressStartValue) => progressStartValue + 1);
-    }, 100);
-    if (progressStartValue >= endValue) {
-      clearInterval(pro);
-    }
-  });
+    setDoneState(progressStartValue);
+    setDegState(progressStartValue * 3.6);
+  }, [progressStartValue]);
 
+  setTimeout(() => {
+    let newStyle = {
+      background: ` conic-gradient(#AA367C ${degState}deg , #4A2FBD 0deg) `,
+    };
+    setStyle(newStyle);
+    if (progressStartValue < endValue) {
+      setProgressStartValue(progressStartValue + 1);
+    }
+  }, 100);
   return (
     <div className="counter">
       <div className="circular-progress" style={style}>
-        <span className="progress-value">{donestate}%</span>
+        <span className="progress-value">{doneState}%</span>
       </div>
       <span className="text"> {text} </span>
     </div>
