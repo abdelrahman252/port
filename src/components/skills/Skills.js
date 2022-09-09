@@ -1,13 +1,10 @@
-import meter1 from "../../assets/img/meter1.svg";
-import meter2 from "../../assets/img/meter2.svg";
-import meter3 from "../../assets/img/meter3.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 import colorSharp from "../../assets/img/color-sharp.png";
 import "./skills.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Progress from "../progress/Progress";
 
 const Skills = () => {
   const responsive = {
@@ -46,30 +43,28 @@ const Skills = () => {
                   responsive={responsive}
                   infinite={true}
                   className="owl-carousel owl-theme skill-slider"
+                  autoPlay={true}
+                  swipeable={true}
+                  draggable={true}
+                  autoPlaySpeed={2000}
                 >
                   <div className="item">
-                    <img src={meter1} alt="Imag" />
-                    <h5>HTML-HTML5</h5>
+                    <Progress endValue={90} text="HTML-HTML5" />
                   </div>
                   <div className="item">
-                    <img src={meter3} alt="Imag" />
-                    <h5>CSS-CSS3</h5>
+                    <Progress endValue={85} text="CSS-CSS3" />
                   </div>
                   <div className="item">
-                    <img src={meter2} alt="Imag" />
-                    <h5>SASS</h5>
+                    <Progress endValue={70} text="SASS" />
                   </div>
                   <div className="item">
-                    <img src={meter2} alt="Imag" />
-                    <h5>JS</h5>
+                    <Progress endValue={65} text="JavaScript" />
                   </div>
                   <div className="item">
-                    <img src={meter2} alt="Imag" />
-                    <h5>Bootstrap</h5>
+                    <Progress endValue={74} text="Bootstrap" />
                   </div>
                   <div className="item">
-                    <img src={meter2} alt="Imag" />
-                    <h5>React js</h5>
+                    <Progress endValue={78} text="React js" />
                   </div>
                 </Carousel>
               </div>

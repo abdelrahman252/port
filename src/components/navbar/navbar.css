@@ -8,9 +8,14 @@ nav.navbar {
     transition: 0.32s ease-in-out;
 }
 
-nav.navbar.scrolled {
+.scrolled {
     padding: 0px 0;
     background-color: #121212;
+}
+
+.bg {
+    background-color: #121212;
+
 }
 
 nav.navbar a.navbar-brand {
@@ -52,6 +57,8 @@ span.navbar-text {
     justify-content: center;
     line-height: 1;
     border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+
 }
 
 .social-icon a::before {
@@ -171,9 +178,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border-color: transparent;
 }
 
-.show {
+/* .show {
     background: #111;
-}
+} */
 
 @media (max-width: 767px) {
     nav.navbar a.navbar-brand {

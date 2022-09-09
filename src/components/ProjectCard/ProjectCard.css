@@ -95,14 +95,6 @@
     letter-spacing: 0.8px;
 }
 
-.background-image-right {
-    top: 20%;
-    position: absolute;
-    bottom: 0;
-    width: 35%;
-    right: 0;
-    z-index: -4;
-}
 @media (max-width: 1023px) {
     .proj-imgbx img{
         height: 200px;

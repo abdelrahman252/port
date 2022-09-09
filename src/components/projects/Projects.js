@@ -254,6 +254,7 @@ const Projects = () => {
                     className={
                       isVisible ? "animate__animated animate__backInLeft" : ""
                     }
+                    style={{ background: "transparent" }}
                   >
                     <Tab.Pane eventKey="first">
                       <Row>
@@ -314,7 +315,7 @@ const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" alt="bg" src={colorSharp2}></img>
+      <img className="background-image-right" alt="bg" src={colorSharp2} />
     </section>
   );
 };

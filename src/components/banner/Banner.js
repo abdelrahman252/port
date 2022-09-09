@@ -55,8 +55,8 @@ const Banner = () => {
 
   return (
     <section className="banner" id="home">
-      <Container>
-        <Row className="align-items-center">
+      <Container className="banner-container" > 
+        <Row className="align-items-center ">
           <Col xs={12} md={6} xl={7} index={index}>
             <div>
               <span className="tagline">Welcome to my Portfolio</span>
@@ -64,7 +64,7 @@ const Banner = () => {
                 {`Hi! I'm Abdelrahman♡`}{" "}
                 <span
                   className="txt-rotate"
-                  dataPeriod="1000"
+                  dataperiod="1000"
                   data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
                 >
                   <span className="wrap">{text}</span>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo_transparent from "../../assets/img/logo_transparent.png";
@@ -7,12 +6,9 @@ import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
-import "./navbar.css"
-
-
+import "./navbar.css";
 
 const NavBar = () => {
-
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -33,15 +29,20 @@ const NavBar = () => {
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   };
+  const [isActive, setIsActive] = useState(false);
+  const addClass = () => {
+    setIsActive((current) => !current);
+  };
+
   return (
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-        <Container>
+        <Container className={isActive ? "bg" : ""}>
           <Navbar.Brand href="/">
             <img src={logo_transparent} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon " onClick={addClass}></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
@@ -77,13 +78,25 @@ const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/abdalrahman-ahmed-024a29230/">
+                <a
+                  href="https://www.linkedin.com/in/abdalrahman-ahmed-024a29230/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="https://www.facebook.com/adbeltahmanahmed/">
+                <a
+                  href="https://www.facebook.com/adbeltahmanahmed/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img src={navIcon2} alt="" />
                 </a>
-                <a href="https://www.instagram.com/abdelrahmanahmed2801/">
+                <a
+                  href="https://www.instagram.com/abdelrahmanahmed2801/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img src={navIcon3} alt="" />
                 </a>
               </div>
@@ -92,13 +105,12 @@ const NavBar = () => {
                   <span>Let’s Connect</span>
                 </button>
               </HashLink>
-              
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </Router>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

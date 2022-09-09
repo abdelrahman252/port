@@ -12,4 +12,17 @@
     z-index: 9999999999999999;
 
 }
+.btn:hover{
+    animation: up .1s linear infinite;
+    -webkit-animation: up .1s linear infinite;
+}
 
+@keyframes up {
+    to{
+        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+        -moz-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+        -o-transform: translateY(5px);
+}
+}

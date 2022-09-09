@@ -3,6 +3,18 @@
     padding: 80px 0;
     position: relative;
     background-color: #111;
+    padding: 60px 50px;
+    z-index: 5;
+
+}
+
+.background-image-right {
+    top: 10%;
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    right: 0;
+    z-index: -5;
 }
 
 .project h2 {
@@ -19,6 +31,7 @@
     margin: 14px auto 30px auto;
     text-align: center;
     width: 56%;
+    text-transform: uppercase;
 }
 
 .project .nav.nav-pills {
@@ -138,6 +151,8 @@
     border-radius: 0 55px 55px 0;
 }
 
+
+
 @media (max-width: 567px) {
     .project .nav.nav-pills {
         width: 100%;
@@ -173,9 +188,9 @@
 
 
 @media (max-width: 767px) {
-   
+
     .project .nav.nav-pills {
-        width: 101% !important;
+        width: 100% !important;
         border-radius: 0;
 
     }
@@ -188,7 +203,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-       height: 70px !important;
+        height: 70px !important;
     }
 
     .project .nav.nav-pills .nav-link.active {
@@ -206,6 +221,13 @@
 
     .project .nav.nav-pills {
         border-radius: 50px;
+    }
+
+    .project .nav.nav-pills .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px !important;
     }
 
     .project .nav.nav-pills .nav-link.active {
