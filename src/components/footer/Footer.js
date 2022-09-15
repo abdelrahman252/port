@@ -5,6 +5,7 @@ import logo_transparent from "../../assets/img/logo_transparent.png";
 import navIcon1 from "../../assets/img/nav-icon1.svg";
 import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
+import whatsapp from "../../assets/img/whatsapp.svg";
 import "./footer.css";
 
 const Footer = () => {
@@ -34,6 +35,13 @@ const Footer = () => {
               </a>
               <a href="https://www.instagram.com/abdelrahmanahmed2801/">
                 <img src={navIcon3} alt="" />
+              </a>
+              <a
+                href="https://wa.me/+201129965148"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={whatsapp} alt="" className="icon" />
               </a>
             </div>
             <p>Copyright 2022. All Rights Reserved</p>
