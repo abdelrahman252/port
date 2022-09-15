@@ -6,7 +6,11 @@ import porto from "../../assets/img/PORTO.PNG";
 import shopping from "../../assets/img/shopping.PNG";
 
 import ai from "../../assets/img/ai.PNG";
+import youtube from "../../assets/img/youtube.PNG";
 import admin from "../../assets/img/admin.PNG";
+import gym from "../../assets/img/gym.PNG";
+import cart from "../../assets/img/cart.PNG";
+import news from "../../assets/img/news.PNG";
 import booking from "../../assets/img/booking.PNG";
 import mui from "../../assets/img/mui.PNG";
 import aishon from "../../assets/img/aishon.PNG";
@@ -32,6 +36,21 @@ import { useState } from "react";
 
 const Projects = () => {
   const Reprojects = [
+    {
+      title: "AI News Project",
+      description: "Design & Development",
+      imgUrl: news,
+      Glink: "https://github.com/abdelrahman252/news",
+      Llink: "https://react-voice-ai-abdo.netlify.app",
+    },
+    {
+      title: "Cart-Ai Startup",
+      description: "Design & Development",
+      imgUrl: cart,
+      Glink: "https://github.com/abdelrahman252/cart-ai",
+      Llink: "https://cart-ai-voice-controller.netlify.app",
+    },
+
     {
       title: "Booking Startup",
       description: "Design & Development",
@@ -109,6 +128,20 @@ const Projects = () => {
       imgUrl: movies,
       Glink: "https://github.com/abdelrahman252/movies",
       Llink: "https://movies-hub-abdo.netlify.app",
+    },
+    {
+      title: "youtube-clone Startup",
+      description: "Design & Development",
+      imgUrl: youtube,
+      Glink: "https://github.com/abdelrahman252/youtube-clone",
+      Llink: "https://youtube-clone-abdo.netlify.app",
+    },
+    {
+      title: "GYM Startup",
+      description: "Design & Development",
+      imgUrl: gym,
+      Glink: "https://github.com/abdelrahman252/gym",
+      Llink: "https://gym-abdo.netlify.app",
     },
   ];
 

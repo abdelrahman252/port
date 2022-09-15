@@ -4,6 +4,7 @@ import logo_transparent from "../../assets/img/logo_transparent.png";
 import navIcon1 from "../../assets/img/nav-icon1.svg";
 import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
+import whatsapp from "../../assets/img/whatsapp.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./navbar.css";
@@ -37,7 +38,7 @@ const NavBar = () => {
   return (
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
-        <Container className={isActive ? "bg" : ""}>
+        <Container className={isActive ? "bg" : "nav-container"}>
           <Navbar.Brand href="/">
             <img src={logo_transparent} alt="Logo" />
           </Navbar.Brand>
@@ -98,6 +99,13 @@ const NavBar = () => {
                   rel="noopener noreferrer"
                 >
                   <img src={navIcon3} alt="" />
+                </a>
+                <a
+                  href="https://wa.me/+201129965148"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={whatsapp} alt="" className="icon" />
                 </a>
               </div>
               <HashLink to="#Contact">
