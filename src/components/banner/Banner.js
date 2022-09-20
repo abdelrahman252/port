@@ -55,11 +55,30 @@ const Banner = () => {
 
   return (
     <section className="banner" id="home">
-      <Container className="banner-container" > 
+      <Container className="banner-container">
         <Row className="align-items-center ">
           <Col xs={12} md={6} xl={7} index={index}>
             <div>
-              <span className="tagline">Welcome to my Portfolio</span>
+              <div className="waviy ">
+                <span className="one">w</span>
+                <span className="to">e</span>
+                <span className="thre">l</span>
+                <span className="for">c</span>
+                <span className="fiv">o</span>
+                <span className="six">m</span>
+                <span className="seven">e</span> <span className="eait">t</span>
+                <span className="nine">o</span> <span className="ten">m</span>
+                <span className="ele">y</span> <span className="twe">p</span>
+                <span className="threet">o</span>
+                <span className="fourt">r</span>
+                <span className="fivit">t</span>
+                <span className="sixth">f</span>
+                <span className="sevth">o</span>
+                <span className="eaigh">l</span>
+                <span className="nint">i</span>
+                <span className="twent">o</span>
+              </div>
+
               <h1>
                 {`Hi! I'm Abdelrahman♡`}{" "}
                 <span
