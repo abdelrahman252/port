@@ -5,6 +5,7 @@ import navIcon1 from "../../assets/img/nav-icon1.svg";
 import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
 import whatsapp from "../../assets/img/whatsapp.svg";
+import mail from "../../assets/img/mail.svg";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./navbar.css";
@@ -77,7 +78,7 @@ const NavBar = () => {
                 Projects
               </Nav.Link>
             </Nav>
-            <span className="navbar-text">
+            <div className="navbar-text">
               <div className="social-icon">
                 <a
                   href="https://www.linkedin.com/in/abdalrahman-ahmed-024a29230/"
@@ -107,13 +108,20 @@ const NavBar = () => {
                 >
                   <img src={whatsapp} alt="" className="icon" />
                 </a>
-              </div>
+                <a
+                  href="mailto:abdelrahmanahmed.3456@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={mail} alt="" className="icon" />
+                </a>
+              </div>{" "}
               <HashLink to="#Contact">
                 <button className="vvd">
                   <span>Let’s Connect</span>
                 </button>
               </HashLink>
-            </span>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

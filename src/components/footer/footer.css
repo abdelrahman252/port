@@ -81,7 +81,22 @@
 }
 
 .footer img {
-    width: 26%;
+    width: 40%;
+}
+
+.go {
+    text-decoration: none;
+    color: #AA367C;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+}
+
+.go:hover {
+    text-decoration: none;
+    color: #4A2FBD;
 }
 
 .footer p {
@@ -123,9 +138,22 @@
     .footer img {
         width: 40%;
     }
+
+    .footer .foot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer p {
+        text-align: center;
+    }
+
+
 }
+
 @media (max-width:1023px) {
     .footer img {
-        width: 40%;
+        width: 45%;
     }
 }

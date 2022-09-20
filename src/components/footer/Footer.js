@@ -1,5 +1,6 @@
 import { Container, Row, Col, Navbar } from "react-bootstrap";
 import MailchimpForm from "../MailchimpForm/MailchimpForm";
+import mail from "../../assets/img/mail.svg";
 
 import logo_transparent from "../../assets/img/logo_transparent.png";
 import navIcon1 from "../../assets/img/nav-icon1.svg";
@@ -26,7 +27,7 @@ const Footer = () => {
             xl={6}
             className="text-center text-sm-end"
           >
-            <div className="social-icon">
+            <div className="social-icon foot">
               <a href="https://www.linkedin.com/in/abdalrahman-ahmed-024a29230/">
                 <img src={navIcon1} alt="" />
               </a>
@@ -43,9 +44,27 @@ const Footer = () => {
               >
                 <img src={whatsapp} alt="" className="icon" />
               </a>
+              <a
+                href="mailto:abdelrahmanahmed.3456@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={mail} alt="" className="icon" />
+              </a>
             </div>
             <p>Copyright 2022. All Rights Reserved</p>
           </Col>
+          <p className="text-center fs-2">
+            Made with ❤️ by{" "}
+            <a
+              href="mailto:abdelrahmanahmed.3456@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="go"
+            >
+              Abdelrahman
+            </a>
+          </p>
         </Row>
       </Container>
     </footer>

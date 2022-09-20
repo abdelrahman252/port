@@ -10,19 +10,42 @@
     left: 20px;
     cursor: pointer;
     z-index: 9999999999999999;
-
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
 }
-.btn:hover{
+
+.btn:hover {
     animation: up 10ms linear infinite;
     -webkit-animation: up 10ms linear infinite;
 }
 
+.btn:active,
+.btn:focus,
+.btn:focus-within {
+    animation: move 1s linear infinite;
+    -webkit-animation: move 1s linear infinite;
+}
+
 @keyframes up {
-    to{
+    to {
         transform: translateY(5px);
         -webkit-transform: translateY(5px);
         -moz-transform: translateY(5px);
         -ms-transform: translateY(5px);
         -o-transform: translateY(5px);
+
+    }
 }
+
+@keyframes move {
+    to {
+        transform: translateX(20px) rotate(360deg);
+        -webkit-transform: translateX(20px) rotate(360deg);
+        -moz-transform: translateX(20px) rotate(360deg);
+        -ms-transform: translateX(20px) rotate(360deg);
+        -o-transform: translateX(20px) rotate(360deg);
+    }
 }
