@@ -35,7 +35,7 @@
 }
 
 .project .nav.nav-pills {
-    width: 72%;
+    width: 100%;
     margin: 0 auto;
     border-radius: 50px;
     background-color: rgb(255 255 255 / 10%);
@@ -43,7 +43,7 @@
 }
 
 .project .nav.nav-pills .nav-item {
-    width: 20%;
+    width:calc(100% / 6);
 }
 
 
@@ -135,7 +135,9 @@
 .nav-link#projects-tabs-tab-second {
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
-
+.nav-link#projects-tabs-tab-sixth {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
 .nav-link#projects-tabs-tab-third {
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -191,19 +193,15 @@
 
     .project .nav.nav-pills {
         width: 100% !important;
-        border-radius: 0;
-
     }
 
-    .project .nav.nav-pills {
-        border-radius: 50px;
-    }
+  
 
     .project .nav.nav-pills .nav-link {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 70px !important;
+        height: 0px !important;
     }
 
     .project .nav.nav-pills .nav-link.active {
@@ -215,14 +213,10 @@
 @media (max-width: 1023px) {
     .project .nav.nav-pills {
         width: 100%;
-        border-radius: 0;
         height: fit-content;
     }
 
-    .project .nav.nav-pills {
-        border-radius: 50px;
-    }
-
+  
     .project .nav.nav-pills .nav-link {
         display: flex;
         align-items: center;

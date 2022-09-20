@@ -7,14 +7,14 @@
     border-radius: 4px;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     cursor: pointer;
     z-index: 9999999999999999;
 
 }
 .btn:hover{
-    animation: up .1s linear infinite;
-    -webkit-animation: up .1s linear infinite;
+    animation: up 10ms linear infinite;
+    -webkit-animation: up 10ms linear infinite;
 }
 
 @keyframes up {

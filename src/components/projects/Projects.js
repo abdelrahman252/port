@@ -28,7 +28,9 @@ import wordpress from "../../assets/img/wordpress.PNG";
 import wordpress2 from "../../assets/img/wordpress2.PNG";
 import quiz from "../../assets/img/quiz.PNG";
 import movies from "../../assets/img/movies.PNG";
+import estate from "../../assets/img/estate.PNG";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
+
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import "./Projects.css";
@@ -224,7 +226,15 @@ const Projects = () => {
       Llink: "https://sites.google.com/view/aitachodx/ai",
     },
   ];
-
+  const NextJSProjects = [
+    {
+      title: " Project",
+      description: "Design & Development",
+      imgUrl: estate,
+      Glink: "https://github.com/abdelrahman252/estate-next-js",
+      Llink: "https://estate-next-js.vercel.app/",
+    },
+  ];
   const [loadmore, setloadmore] = useState(3);
   const [loadmore2, setloadmore2] = useState(3);
   const [loadmore3, setloadmore3] = useState(3);
@@ -268,13 +278,16 @@ const Projects = () => {
                   <Nav.Link eventKey="first">React js</Nav.Link>
                 </Nav.Item>
                 <Nav.Item sm={6} md={6}>
-                  <Nav.Link eventKey="second">JavaScript</Nav.Link>
+                  <Nav.Link eventKey="sixth">Next js</Nav.Link>
+                </Nav.Item>
+                <Nav.Item sm={6} md={6}>
+                  <Nav.Link eventKey="second">Java Script</Nav.Link>
                 </Nav.Item>
                 <Nav.Item sm={6} md={6}>
                   <Nav.Link eventKey="third">Landing Pages</Nav.Link>
                 </Nav.Item>
                 <Nav.Item sm={6} md={6}>
-                  <Nav.Link eventKey="forth">WordPress </Nav.Link>
+                  <Nav.Link eventKey="forth">Word Press </Nav.Link>
                 </Nav.Item>
                 <Nav.Item sm={6} md={6}>
                   <Nav.Link eventKey="fifth">Google Sites </Nav.Link>
@@ -337,6 +350,13 @@ const Projects = () => {
                     <Tab.Pane eventKey="fifth">
                       <Row>
                         {googleProjects.map((project, index) => {
+                          return <ProjectCard key={index} {...project} />;
+                        })}
+                      </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="sixth">
+                      <Row>
+                        {NextJSProjects.map((project, index) => {
                           return <ProjectCard key={index} {...project} />;
                         })}
                       </Row>
