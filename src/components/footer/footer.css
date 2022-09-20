@@ -83,7 +83,11 @@
 .footer img {
     width: 40%;
 }
-
+@font-face {
+    font-family: Centra;
+    src: url('../../assets/font/LucySaidOkPersonalUseItalic-OV9ee.ttf');
+    font-weight: 400;
+  }
 .go {
     text-decoration: none;
     color: #AA367C;
@@ -92,6 +96,8 @@
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
+    font-family: Centra;
+    font-size: 38px;
 }
 
 .go:hover {
