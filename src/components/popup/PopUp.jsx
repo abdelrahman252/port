@@ -3,7 +3,7 @@ import TrackVisibility from "react-on-screen";
 import "./popup.css";
 
 const PopUp = ({ setPop }) => {
-  const [isyay, setIsYay] = useState(false);
+  // const [isyay, setIsYay] = useState(false);
   let isHi = (
     <div className="variant is-hi">
       <div className="body"></div>
@@ -14,7 +14,7 @@ const PopUp = ({ setPop }) => {
   let isSad = <div className="variant is-shrugging"></div>;
 
   const hover = () => {
-    setIsYay(true);
+    // setIsYay(true);
   };
   return (
     <div className="big-pop">
