@@ -23,13 +23,12 @@ function App() {
     }, 2000);
   }
   const [pop, setPop] = useState(false);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setPop(true);
-    }, 3000);
+    }, 20000);
   }, []);
-
 
   return (
     !loading && (
