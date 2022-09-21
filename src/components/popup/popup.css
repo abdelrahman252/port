@@ -1,10 +1,17 @@
-.pop {
-    position: fixed;
-    bottom: 50px;
-    left: 35%;
+.big-pop {
+
     z-index: 999999999999;
-    /* background: #000;
-    padding: 40px; */
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.pop {
+
+    z-index: 999999999999;
+
 }
 
 .pop-text {
@@ -88,9 +95,13 @@
     color: white;
 }
 
-.pop-wrapper .boy {
+.pop-wrapper {
+    position: relative;
+}
+
+.pop .boy {
     position: absolute;
-    bottom: 90%;
+    bottom: 100%;
     left: 20px;
     width: 132px;
     height: 118px;
@@ -98,7 +109,7 @@
     pointer-events: none;
 }
 
-.pop-wrapper .boy .variant {
+.pop .boy .variant {
     position: absolute;
     top: 0;
     left: 0;
@@ -112,7 +123,7 @@
     -o-transition: transform 0.15s ease-in;
 }
 
-.pop-wrapper .boy .variant.is-hi {
+.pop .boy .variant.is-hi {
     transform: translateY(0);
     transition-delay: 0.1s;
     transition-timing-function: ease-out;
@@ -122,7 +133,7 @@
     -o-transform: translateY(0);
 }
 
-.pop-wrapper .boy .is-hi .body {
+.pop .boy .is-hi .body {
     position: absolute;
     top: 0;
     left: 0;
@@ -133,7 +144,7 @@
 
 }
 
-.pop-wrapper .boy .is-hi .arm {
+.pop .boy .is-hi .arm {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -146,13 +157,13 @@
     -webkit-animation: wave 3s infinite ease-in-out;
 }
 
-.pop-wrapper .boy .is-shrugging {
+.pop .boy .is-shrugging {
     background: url("../../assets/img/sad.png");
     z-index: 99999999999;
 
 }
 
-.pop-wrapper .boy .is-yay {
+.pop .boy .is-yay {
     background: url("../../assets/img/yay.png");
     z-index: 99999999999;
 
@@ -205,9 +216,7 @@
 }
 
 @media (max-width: 767px) {
-    .pop {
-        left: 17% !important;
-    }
+
 
     .pop-text {
         margin: 10px 0;
@@ -218,9 +227,6 @@
 }
 
 @media (max-width: 1023px) {
-    .pop {
-        left: 25%;
-    }
 
     .pop-text {
         margin: 20px 0;
