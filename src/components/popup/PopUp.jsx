@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import TrackVisibility from "react-on-screen";
 import "./popup.css";
 
 const PopUp = ({ setPop }) => {
+  const [isyay, setIsYay] = useState(false);
+  let isHi = (
+    <div className="variant is-hi">
+      <div className="body"></div>
+      <div className="arm js-boy-arm"></div>
+    </div>
+  );
+  let isYay = <div className="variant is-yay"></div>;
+  let isSad = <div className="variant is-shrugging"></div>;
+
+  const hover = () => {
+    setIsYay(true);
+  };
   return (
     <div className="big-pop">
       <TrackVisibility>
@@ -13,22 +26,19 @@ const PopUp = ({ setPop }) => {
             }
           >
             <div className="pop-wrapper">
-              <div class="boy">
-                <div class="variant is-hi">
-                  <div class="body"></div>
-                  <div class="arm js-boy-arm"></div>
-                </div>
-                <div class="variant is-yay"></div>
-                <div class="variant is-shrugging"></div>
+              <div className="boy">
+                {isHi}
+                {isYay}
+                {isSad}
               </div>
 
               <div className="text-wrapper">
                 <div className="pop-text">
                   Hey! You seem to really like my portfolio{" "}
-                  <div class="tip"></div>
+                  <div className="tip"></div>
                 </div>
                 <div className="pop-text ">
-                  Would you like to HIRE me ?<div class="tip"></div>
+                  Would you like to HIRE me ?<div className="tip"></div>
                 </div>
               </div>
 
@@ -45,6 +55,7 @@ const PopUp = ({ setPop }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="botn yes"
+                  onMouseOver={hover}
                 >
                   yes, Hire Me!
                 </a>
