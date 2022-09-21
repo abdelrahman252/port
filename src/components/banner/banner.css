@@ -141,6 +141,7 @@
     animation-name: waviy;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+    letter-spacing: .5px;
 }
 
 .waviy span:nth-child(1) {

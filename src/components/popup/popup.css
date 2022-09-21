@@ -53,6 +53,8 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    background: linear-gradient(#ed72fdab, #fdb5721a);
+
 }
 
 
@@ -187,4 +189,45 @@
     100% {
         transform: rotate(0deg);
     }
+}
+
+@media (max-width: 567px) {
+    .pop {
+        left: 10% !important;
+    }
+
+    .pop-text {
+        margin: 10px 0;
+        font-size: 20px;
+        padding: 20px 10px;
+
+    }
+}
+
+@media (max-width: 767px) {
+    .pop {
+        left: 17% !important;
+    }
+
+    .pop-text {
+        margin: 10px 0;
+        font-size: 20px;
+        padding: 20px 10px;
+
+    }
+}
+
+@media (max-width: 1023px) {
+    .pop {
+        left: 25%;
+    }
+
+    .pop-text {
+        margin: 20px 0;
+        font-size: 20px;
+        padding: 20px 15px;
+
+    }
+
+
 }
