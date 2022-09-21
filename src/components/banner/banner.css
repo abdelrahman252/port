@@ -83,17 +83,15 @@
 }
 
 
+
 @media (max-width: 767px) {
     .banner {
         padding-top: 150px !important;
-
     }
 
-
-
     .banner h1 {
-        font-size: 43px;
-
+        font-size: 45px;
+        font-family: cursive;
     }
 }
 

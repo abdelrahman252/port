@@ -203,6 +203,11 @@
 }
 
 @media (max-width: 567px) {
+    .pop {
+        color: grey;
+        z-index: 999999999999;
+
+    }
 
     .big-pop {
         top: 70%;
