@@ -3,18 +3,38 @@ import TrackVisibility from "react-on-screen";
 import "./popup.css";
 
 const PopUp = ({ setPop }) => {
-  // const [isyay, setIsYay] = useState(false);
-  let isHi = (
-    <div className="variant is-hi">
-      <div className="body"></div>
-      <div className="arm js-boy-arm"></div>
-    </div>
-  );
-  let isYay = <div className="variant is-yay"></div>;
-  let isSad = <div className="variant is-shrugging"></div>;
+  const [ishi, setIsHi] = useState("translateY(0)");
+  const [issad, setIsSad] = useState("translateY(100%)");
+  const [isyay, setIsYay] = useState("translateY(100%)");
 
-  const hover = () => {
-    // setIsYay(true);
+  const boyStyles = {
+    transform: `${ishi}`,
+  };
+  const yayStyle = {
+    transform: `${isyay}`,
+  };
+  const sadStyles = {
+    transform: `${issad}`,
+  };
+  console.log(boyStyles);
+
+  const yhover = () => {
+    setIsYay("translateY(0)");
+    setIsHi("translateY(100%)");
+  };
+
+  const yhoverLeave = () => {
+    setIsHi("translateY(0)");
+    setIsYay("translateY(100%)");
+  };
+  const nhover = () => {
+    setIsSad("translateY(0)");
+    setIsHi("translateY(100%)");
+  };
+
+  const nhoverLeave = () => {
+    setIsHi("translateY(0)");
+    setIsSad("translateY(100%)");
   };
   return (
     <div className="big-pop">
@@ -27,9 +47,12 @@ const PopUp = ({ setPop }) => {
           >
             <div className="pop-wrapper">
               <div className="boy">
-                {isHi}
-                {isYay}
-                {isSad}
+                <div className="variant" style={boyStyles}>
+                  <div className="body"></div>
+                  <div className="arm "></div>
+                </div>
+                <div className="is-yay" style={yayStyle}></div>;
+                <div className="is-shrugging" style={sadStyles}></div>;
               </div>
 
               <div className="text-wrapper">
@@ -46,7 +69,9 @@ const PopUp = ({ setPop }) => {
                 <button
                   type="button"
                   onClick={() => setPop(false)}
-                  className="botn no"
+                  className="botn "
+                  onMouseEnter={nhover}
+                  onMouseLeave={nhoverLeave}
                 >
                   NO
                 </button>
@@ -54,8 +79,9 @@ const PopUp = ({ setPop }) => {
                   href="https://www.linkedin.com/in/abdalrahman-ahmed-024a29230/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="botn yes"
-                  onMouseOver={hover}
+                  className="botn "
+                  onMouseEnter={yhover}
+                  onMouseLeave={yhoverLeave}
                 >
                   yes, Hire Me!
                 </a>
