@@ -22,7 +22,7 @@
     padding: 20px 30px;
     border: 2px solid #ffffff;
     border-radius: 8px;
-    background: linear-gradient(#ed72fdab, #fdb5721a);
+    background: linear-gradient(#ed72fdab, #d272f856);
 }
 
 .pop-text .tip {
@@ -60,7 +60,7 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    background: linear-gradient(#ed72fdab, #fdb5721a);
+    background: linear-gradient(#ed72fdab, #d672fd72);
 
 }
 
@@ -204,9 +204,7 @@
 
 @media (max-width: 567px) {
     .pop {
-        color: grey;
         z-index: 999999999999;
-
     }
 
     .big-pop {
