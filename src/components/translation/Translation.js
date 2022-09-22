@@ -1,7 +1,7 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
-import HttpApi from "i18next-http-backend";
-import LanguageDetector from "i18next-browser-languagedetector";
+//import HttpApi from "i18next-http-backend";
+//import LanguageDetector from "i18next-browser-languagedetector";
 import en from "../../assets/locales/en/en.json";
 import fr from "../../assets/locales/fr/fr.json";
 import ar from "../../assets/locales/ar/ar.json";
