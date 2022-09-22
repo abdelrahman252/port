@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import TrackVisibility from "react-on-screen";
 
 const Newsletter = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState("");

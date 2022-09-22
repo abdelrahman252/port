@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../../assets/img/contact-img.svg";
 import "animate.css";
-import TrackVisibility from "react-on-screen";
+
 import "./contact.css";
 import emailjs from "emailjs-com";
 import { useState } from "react";

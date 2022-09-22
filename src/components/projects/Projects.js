@@ -32,7 +32,7 @@ import estate from "../../assets/img/estate.PNG";
 import colorSharp2 from "../../assets/img/color-sharp2.png";
 
 import "animate.css";
-import TrackVisibility from "react-on-screen";
+
 import "./Projects.css";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";

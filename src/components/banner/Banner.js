@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../../assets/img/header-img.svg";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
-import TrackVisibility from "react-on-screen";
+
 import "./banner.css";
 import { useTranslation } from "react-i18next";
 
