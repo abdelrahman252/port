@@ -25,7 +25,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
     font-weight: 400;
     color: #fff !important;
     letter-spacing: 0.8px;
-    padding: 0 25px;
+    padding: 0 20px;
     font-size: 18px;
     opacity: 0.75;
     transition: all .3s ease;
@@ -239,7 +239,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         align-items: center;
     }
 
- 
+
 
     .nav-container {
         max-width: 1024px;
@@ -257,4 +257,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         display: flex !important;
         align-items: center !important;
     }
+}
+
+nav.navbar .empty {
+    background: transparent !important;
+    border: #fff 1px solid !important;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+nav.navbar .empty:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }

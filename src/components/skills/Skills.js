@@ -5,6 +5,7 @@ import colorSharp from "../../assets/img/color-sharp.png";
 import "./skills.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Progress from "../progress/Progress";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
   const responsive = {
@@ -26,7 +27,7 @@ const Skills = () => {
       items: 1,
     },
   };
-
+  const { t } = useTranslation();
   return (
     <section className="skill" id="skills">
       <div className="container">
@@ -34,10 +35,10 @@ const Skills = () => {
           <div className="col-12">
             <div>
               <div className="skill-bx" data-wow-delay="0.3s">
-                <h2>Skills</h2>
+                <h2> {t("nav_skills")}</h2>
                 <p>
-                  You can't use up creativity . <br></br>
-                  The more you use , the more you have in your significant mind.
+                {t("skills_skillsf")} <br></br>
+                {t("skills_skillss")}
                 </p>
                 <Carousel
                   responsive={responsive}

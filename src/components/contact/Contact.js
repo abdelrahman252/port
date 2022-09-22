@@ -5,14 +5,17 @@ import TrackVisibility from "react-on-screen";
 import "./contact.css";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
-  const [val, setVal] = useState("Send");
+  const { t } = useTranslation();
+
+  const [val, setVal] = useState(t("contact_send"));
   const btn = document.getElementById("button");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setVal("Sending...");
+    setVal(t("contact_sending"));
     emailjs
       .sendForm(
         "service_96zcp44",
@@ -21,17 +24,17 @@ const Contact = () => {
         "xOB280Hm7-8shfZNJ"
       )
       .then(() => {
-        setVal("Sent Successfully! 𓆩♡𓆪");
+        setVal(t("contact_sent"));
         btn.style.background = "green";
         clearFields();
         setTimeout(() => {
-          setVal("Send");
+          setVal(t("contact_send"));
           btn.style.background = "white";
-        }, 3000);
+        }, 2000);
       })
       .catch((err) => {
         setTimeout(() => {
-          setVal("Send Again");
+          setVal(t("contact_senderr"));
           btn.style.background = "red";
         }, 3000);
       });
@@ -53,98 +56,79 @@ const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <img
-                  className={
-                    isVisible ? "animate__animated animate__swing" : ""
-                  }
-                  src={contactImg}
-                  alt="Contact Us"
-                />
-              )}
-            </TrackVisibility>
+            <img
+              className="animate__animated animate__swing"
+              src={contactImg}
+              alt="Contact Us"
+              style={{ transform: "translateX(100px )" }}
+            />
           </Col>
           <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__backInRight" : ""
-                  }
-                >
-                  <h2>Get In Touch</h2>
-                  <form onSubmit={handleSubmit}>
-                    <Row>
-                      <Col size={12} sm={6} className="px-1">
-                        <input
-                          value={firstName}
-                          onChange={(e) => setFirstName(e.target.value)}
-                          type="text"
-                          required
-                          placeholder="First Name"
-                          name="name"
-                          className="form-int"
-                        />
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input
-                          value={secName}
-                          onChange={(e) => setSecName(e.target.value)}
-                          type="text"
-                          placeholder="Last Name"
-                          name="name"
-                          className="form-int"
-                          required
-                        />
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          type="email"
-                          placeholder="Email Address"
-                          name="user_email"
-                          className="form-int"
-                          required
-                        />
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input
-                          value={number}
-                          onChange={(e) => setNumber(e.target.value)}
-                          type="tel"
-                          placeholder="Phone No."
-                          name="phone"
-                          className="form-int"
-                        />
-                      </Col>
-                      <Col size={12} className="px-1">
-                        <textarea
-                          value={message}
-                          onChange={(e) => setMessage(e.target.value)}
-                          rows="6"
-                          placeholder="Message"
-                          name="message"
-                        ></textarea>
-                        <input
-                          type="submit"
-                          id="button"
-                          className="submit"
-                          value={val}
-                        />
-                      </Col>
-                      {/* {
-                        status.message &&
-                        <Col>
-                          <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                        </Col>
-                      } */}
-                    </Row>
-                  </form>
-                </div>
-              )}
-            </TrackVisibility>
+            <div className="animate__animated animate__backInRight">
+              <h2>{t("contact_head")}</h2>
+              <form onSubmit={handleSubmit}>
+                <Row>
+                  <Col size={12} sm={6} className="px-1">
+                    <input
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      type="text"
+                      required
+                      placeholder={t("contact_first")}
+                      name="name"
+                      className="form-int"
+                    />
+                  </Col>
+                  <Col size={12} sm={6} className="px-1">
+                    <input
+                      value={secName}
+                      onChange={(e) => setSecName(e.target.value)}
+                      type="text"
+                      placeholder={t("contact_last")}
+                      name="name"
+                      className="form-int"
+                      required
+                    />
+                  </Col>
+                  <Col size={12} sm={6} className="px-1">
+                    <input
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      type="email"
+                      placeholder={t("contact_em")}
+                      name="user_email"
+                      className="form-int"
+                      required
+                    />
+                  </Col>
+                  <Col size={12} sm={6} className="px-1">
+                    <input
+                      value={number}
+                      onChange={(e) => setNumber(e.target.value)}
+                      type="tel"
+                      placeholder={t("contact_num")}
+                      name="phone"
+                      className="form-int"
+                    />
+                  </Col>
+                  <Col size={12} className="px-1">
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      rows="6"
+                      placeholder={t("contact_mes")}
+                      name="message"
+                    ></textarea>
+                    <input
+                      type="submit"
+                      id="button"
+                      className="submit"
+                      value={val}
+                    />
+                  </Col>
+                </Row>
+              </form>
+            </div>
           </Col>
         </Row>
       </Container>

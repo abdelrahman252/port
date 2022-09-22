@@ -1,4 +1,4 @@
-.btn {
+.buttn {
     background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
     border: none;
     color: white;
@@ -17,27 +17,26 @@
     -o-transition: all 0.1s ease;
 }
 
-.btn:hover {
+.buttn:hover {
     animation: up 10ms linear infinite;
     -webkit-animation: up 10ms linear infinite;
 }
 
-.btn:active,
-.btn:focus,
-.btn:focus-within {
+.buttn:active,
+.buttn:focus,
+.buttn:focus-within {
     animation: move 1s linear infinite;
     -webkit-animation: move 1s linear infinite;
 }
 
 @keyframes up {
     to {
-        transform: translateY(5px);
-        -webkit-transform: translateY(5px);
-        -moz-transform: translateY(5px);
-        -ms-transform: translateY(5px);
-        -o-transform: translateY(5px);
-
-    }
+        transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+        -o-transform: translateY(10px);
+}
 }
 
 @keyframes move {

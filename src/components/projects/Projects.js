@@ -35,6 +35,7 @@ import "animate.css";
 import TrackVisibility from "react-on-screen";
 import "./Projects.css";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
   const Reprojects = [
@@ -228,7 +229,7 @@ const Projects = () => {
   ];
   const NextJSProjects = [
     {
-      title: " Project",
+      title: "Houses Project",
       description: "Design & Development",
       imgUrl: estate,
       Glink: "https://github.com/abdelrahman252/estate-next-js",
@@ -250,23 +251,18 @@ const Projects = () => {
   const moreLoad3 = () => {
     setloadmore3(loadmore3 + loadmore3);
   };
+  const { t } = useTranslation();
+
   return (
     <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "animate__animated animate__zoomInDown" : ""
-                  }
-                >
-                  <h2>Projects</h2>
-                  <p>Built with patience and hard work</p>
-                </div>
-              )}
-            </TrackVisibility>
+            <div className="animate__animated animate__zoomInDown">
+              <h2> {t("nav_projects")}</h2>
+              <p>{t("project_text")}</p>
+            </div>
+
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
               <Nav
                 size={12}
@@ -275,95 +271,90 @@ const Projects = () => {
                 id="pills-tab"
               >
                 <Nav.Item sm={6} md={6}>
-                  <Nav.Link eventKey="first">React js</Nav.Link>
+                  <Nav.Link eventKey="first">{t("project_react")}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item sm={6} md={6}>
-                  <Nav.Link eventKey="sixth">Next js</Nav.Link>
+                  <Nav.Link eventKey="sixth">{t("project_next")}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item sm={6} md={6}>
-                  <Nav.Link eventKey="second">Java Script</Nav.Link>
+                  <Nav.Link eventKey="second">{t("project_java")}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item sm={6} md={6}>
-                  <Nav.Link eventKey="third">Landing Pages</Nav.Link>
+                  <Nav.Link eventKey="third">{t("project_land")}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item sm={6} md={6}>
-                  <Nav.Link eventKey="forth">Word Press </Nav.Link>
+                  <Nav.Link eventKey="forth">{t("project_wordp")}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item sm={6} md={6}>
-                  <Nav.Link eventKey="fifth">Google Sites </Nav.Link>
+                  <Nav.Link eventKey="fifth">{t("project_google")}</Nav.Link>
                 </Nav.Item>
               </Nav>
-              <TrackVisibility>
-                {({ isVisible }) => (
-                  <Tab.Content
-                    id="slideInUp"
-                    className={
-                      isVisible ? "animate__animated animate__backInLeft" : ""
-                    }
-                    style={{ background: "transparent" }}
-                  >
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {slice.map((project, index) => {
-                          return <ProjectCard key={index} {...project} />;
-                        })}
-                      </Row>
 
-                      <div className="more">
-                        <button onClick={() => moreLoad()} className="load">
-                          Load More
-                        </button>
-                      </div>
-                    </Tab.Pane>
+              <Tab.Content
+                id="slideInUp"
+                className="animate__animated animate__backInLeft"
+                style={{ background: "transparent" }}
+              >
+                <Tab.Pane eventKey="first">
+                  <Row>
+                    {slice.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
 
-                    <Tab.Pane eventKey="second">
-                      <Row>
-                        {slice2.map((project, index) => {
-                          return <ProjectCard key={index} {...project} />;
-                        })}
-                      </Row>
-                      <div className="more">
-                        <button onClick={() => moreLoad2()} className="load">
-                          Load More
-                        </button>
-                      </div>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <Row>
-                        {slice3.map((project, index) => {
-                          return <ProjectCard key={index} {...project} />;
-                        })}
-                      </Row>
-                      <div className="more">
-                        <button onClick={() => moreLoad3()} className="load">
-                          Load More
-                        </button>
-                      </div>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="forth">
-                      <Row>
-                        {pressProjects.map((project, index) => {
-                          return <ProjectCard key={index} {...project} />;
-                        })}
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="fifth">
-                      <Row>
-                        {googleProjects.map((project, index) => {
-                          return <ProjectCard key={index} {...project} />;
-                        })}
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="sixth">
-                      <Row>
-                        {NextJSProjects.map((project, index) => {
-                          return <ProjectCard key={index} {...project} />;
-                        })}
-                      </Row>
-                    </Tab.Pane>
-                  </Tab.Content>
-                )}
-              </TrackVisibility>
+                  <div className="more">
+                    <button onClick={() => moreLoad()} className="load">
+                      {t("project_load")}
+                    </button>
+                  </div>
+                </Tab.Pane>
+
+                <Tab.Pane eventKey="second">
+                  <Row>
+                    {slice2.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                  <div className="more">
+                    <button onClick={() => moreLoad2()} className="load">
+                      {t("project_load")}
+                    </button>
+                  </div>
+                </Tab.Pane>
+                <Tab.Pane eventKey="third">
+                  <Row>
+                    {slice3.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                  <div className="more">
+                    <button onClick={() => moreLoad3()} className="load">
+                      {t("project_load")}
+                    </button>
+                  </div>
+                </Tab.Pane>
+                <Tab.Pane eventKey="forth">
+                  <Row>
+                    {pressProjects.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="fifth">
+                  <Row>
+                    {googleProjects.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="sixth">
+                  <Row>
+                    {NextJSProjects.map((project, index) => {
+                      return <ProjectCard key={index} {...project} />;
+                    })}
+                  </Row>
+                </Tab.Pane>
+              </Tab.Content>
             </Tab.Container>
           </Col>
         </Row>

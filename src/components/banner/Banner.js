@@ -5,6 +5,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import "./banner.css";
+import { useTranslation } from "react-i18next";
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -12,19 +13,9 @@ const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
+  const { t } = useTranslation();
   const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
   const period = 2000;
-
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -52,7 +43,16 @@ const Banner = () => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
 
+    return () => {
+      clearInterval(ticker);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [text]);
   return (
     <section className="banner" id="home">
       <Container className="banner-container">
@@ -60,57 +60,49 @@ const Banner = () => {
           <Col xs={12} md={6} xl={7} index={index}>
             <div>
               <div className="waviy ">
-                <span className="one">w</span>
-                <span className="to">e</span>
-                <span className="thre">l</span>
-                <span className="for">c</span>
-                <span className="fiv">o</span>
-                <span className="six">m</span>
-                <span className="seven">e</span> <span className="eait">t</span>
-                <span className="nine">o</span> <span className="ten">m</span>
-                <span className="ele">y</span> <span className="twe">p</span>
-                <span className="threet">o</span>
-                <span className="fourt">r</span>
-                <span className="fivit">t</span>
-                <span className="sixth">f</span>
-                <span className="sevth">o</span>
-                <span className="eaigh">l</span>
-                <span className="nint">i</span>
-                <span className="twent">o</span>
+                <span className="one">{t("porto1")} </span>
+                <span className="to"> {t("porto2")}</span>
+                <span className="thre"> {t("porto3")} </span>
+                <span className="for"> {t("porto4")}</span>
+                <span className="fiv"> {t("porto5")}</span>
+                <span className="six"> {t("porto6")}</span>
+                <span className="seven">{t("porto7")} </span>{" "}
+                <span className="eait"> {t("porto8")}</span>
+                <span className="nine"> {t("porto9")}</span>{" "}
+                <span className="ten">{t("porto10")} </span>
+                <span className="ele">{t("porto11")} </span>{" "}
+                <span className="twe">{t("porto12")}</span>
+                <span className="threet">{t("porto13")} </span>
+                <span className="fourt">{t("porto14")}</span>
+                <span className="fivit">{t("porto15")}</span>
+                <span className="sixth">{t("porto16")}</span>
+                <span className="sevth">{t("porto17")}</span>
+                <span className="eaigh">{t("porto18")}</span>
+                <span className="nint">{t("porto19")}</span>
+                <span className="twent">{t("porto20")}</span>
               </div>
 
               <h1>
-                {`Hi! I'm Abdelrahman♡`}{" "}
+                {t("banner_head")}{" "}
                 <span
                   className="txt-rotate"
-                  dataperiod="1000"
+                  dataperiod="500"
                   data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
                 >
                   <span className="wrap">{text}</span>
                 </span>
               </h1>
-              <p>
-                Hello! My name is Abdelrahman Ahmed. I am a self-taught web
-                developer who is passionate about programming in general and
-                especially web development.
-              </p>
-              <a href="#Contact">
-                Let’s Connect <ArrowRightCircle size={25} />
+              <p>{t("banner_text")}</p>
+              <a href="#Contact" className={t("move")}>
+                {t("nav_button")}{" "}
+                <ArrowRightCircle size={25} className={t("rotate")} />
               </a>
             </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) => (
-                <div
-                  className={
-                    isVisible ? "iamge animate__animated animate__rollIn" : ""
-                  }
-                >
-                  <img src={headerImg} alt="Header Img" />
-                </div>
-              )}
-            </TrackVisibility>
+            <div className="iamge animate__animated animate__rollIn">
+              <img src={headerImg} alt="Header Img" />
+            </div>
           </Col>
         </Row>
       </Container>

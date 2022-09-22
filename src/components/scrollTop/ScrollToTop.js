@@ -25,7 +25,7 @@ const ScrollToTop = ({ showBelow }) => {
   return (
     <div>
       {show && (
-        <button onClick={handleClick} className="btn">
+        <button onClick={handleClick} className="buttn">
           UP
         </button>
       )}

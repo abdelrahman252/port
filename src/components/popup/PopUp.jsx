@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import TrackVisibility from "react-on-screen";
 import "./popup.css";
 
@@ -16,7 +17,6 @@ const PopUp = ({ setPop }) => {
   const sadStyles = {
     transform: `${issad}`,
   };
-  console.log(boyStyles);
 
   const yhover = () => {
     setIsYay("translateY(0)");
@@ -36,6 +36,7 @@ const PopUp = ({ setPop }) => {
     setIsHi("translateY(0)");
     setIsSad("translateY(100%)");
   };
+  const { t } = useTranslation();
   return (
     <div className="big-pop">
       <TrackVisibility>
@@ -51,17 +52,17 @@ const PopUp = ({ setPop }) => {
                   <div className="body"></div>
                   <div className="arm "></div>
                 </div>
-                <div className="is-yay" style={yayStyle}></div>;
-                <div className="is-shrugging" style={sadStyles}></div>;
+                <div className="is-yay" style={yayStyle}></div>
+                <div className="is-shrugging" style={sadStyles}></div>
               </div>
 
               <div className="text-wrapper">
                 <div className="pop-text">
-                  Hey! You seem to really like my portfolio{" "}
-                  <div className="tip"></div>
+                  {t("pop_hey")} <div className="tip"></div>
                 </div>
                 <div className="pop-text ">
-                  Would you like to HIRE me ?<div className="tip"></div>
+                  {t("pop_wou")}
+                  <div className="tip"></div>
                 </div>
               </div>
 
@@ -69,11 +70,11 @@ const PopUp = ({ setPop }) => {
                 <button
                   type="button"
                   onClick={() => setPop(false)}
-                  className="botn "
+                  className="botn no"
                   onMouseEnter={nhover}
                   onMouseLeave={nhoverLeave}
                 >
-                  NO
+                  {t("pop_no")}
                 </button>
                 <a
                   href="https://www.linkedin.com/in/abdalrahman-ahmed-024a29230/"
@@ -83,7 +84,7 @@ const PopUp = ({ setPop }) => {
                   onMouseEnter={yhover}
                   onMouseLeave={yhoverLeave}
                 >
-                  yes, Hire Me!
+                  {t("pop_yes")}
                 </a>
               </div>
             </div>

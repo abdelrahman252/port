@@ -8,8 +8,10 @@ import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
 import whatsapp from "../../assets/img/whatsapp.svg";
 import "./footer.css";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <Container>
@@ -25,7 +27,7 @@ const Footer = () => {
             sm={12}
             md={6}
             xl={6}
-            className="text-center text-sm-end"
+            className="text-center text-sm-right"
           >
             <div className="social-icon foot">
               <a href="https://www.linkedin.com/in/abdalrahman-ahmed-024a29230/">
@@ -52,17 +54,18 @@ const Footer = () => {
                 <img src={mail} alt="" className="icon" />
               </a>
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+
+            <p>{t("footer_copy")}</p>
           </Col>
           <p className="text-center fs-2">
-            Made with ❤️ by{" "}
+            {t("footer_made")}
             <a
               href="mailto:abdelrahmanahmed.3456@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="go"
             >
-              Abdelrahman
+              {t("footer_name")}
             </a>
           </p>
         </Row>
