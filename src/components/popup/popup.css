@@ -229,7 +229,7 @@
     }
 
     .big-pop {
-        top: 70%;
+        top: 50% !important;
     }
 
     .pop-text {
@@ -248,7 +248,11 @@
 }
 
 @media (max-width: 767px) {
-
+  
+        .big-pop {
+            top: 58% !important;
+        }
+    
 
     .pop-text {
         margin: 10px 0;
@@ -260,11 +264,7 @@
 
 @media (max-width: 1200px) {
     .big-pop {
-
-
-        top: 78%;
-
-
+        top: 65% ;
     }
 
     .pop-text {
