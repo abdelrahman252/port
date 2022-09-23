@@ -6,7 +6,7 @@ import "./contact.css";
 import emailjs from "emailjs-com";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-
+import { Slide } from "react-awesome-reveal";
 const Contact = () => {
   const { t } = useTranslation();
 
@@ -56,78 +56,82 @@ const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <img
-              className="animate__animated animate__swing"
-              src={contactImg}
-              alt="Contact Us"
-              style={{ transform: "translateX(100px )" }}
-            />
+            <Slide direction="left" triggerOnce="true"  >
+              <img
+                className="animate__animated animate__swing"
+                src={contactImg}
+                alt="Contact Us"
+                style={{ transform: "translateX(100px )" }}
+              />
+            </Slide>
           </Col>
           <Col size={12} md={6}>
             <div className="animate__animated animate__backInRight">
               <h2>{t("contact_head")}</h2>
-              <form onSubmit={handleSubmit}>
-                <Row>
-                  <Col size={12} sm={6} className="px-1">
-                    <input
-                      value={firstName}
-                      onChange={(e) => setFirstName(e.target.value)}
-                      type="text"
-                      required
-                      placeholder={t("contact_first")}
-                      name="name"
-                      className="form-int"
-                    />
-                  </Col>
-                  <Col size={12} sm={6} className="px-1">
-                    <input
-                      value={secName}
-                      onChange={(e) => setSecName(e.target.value)}
-                      type="text"
-                      placeholder={t("contact_last")}
-                      name="name"
-                      className="form-int"
-                      required
-                    />
-                  </Col>
-                  <Col size={12} sm={6} className="px-1">
-                    <input
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      type="email"
-                      placeholder={t("contact_em")}
-                      name="user_email"
-                      className="form-int"
-                      required
-                    />
-                  </Col>
-                  <Col size={12} sm={6} className="px-1">
-                    <input
-                      value={number}
-                      onChange={(e) => setNumber(e.target.value)}
-                      type="tel"
-                      placeholder={t("contact_num")}
-                      name="phone"
-                      className="form-int"
-                    />
-                  </Col>
-                  <Col size={12} className="px-1">
-                    <textarea
-                      value={message}
-                      onChange={(e) => setMessage(e.target.value)}
-                      rows="6"
-                      placeholder={t("contact_mes")}
-                      name="message"
-                    ></textarea>
-                    <input
-                      type="submit"
-                      id="button"
-                      className="submit"
-                      value={val}
-                    />
-                  </Col>
-                </Row>
-              </form>
+              <Slide direction="right" triggerOnce="true">
+                <form onSubmit={handleSubmit}>
+                  <Row>
+                    <Col size={12} sm={6} className="px-1">
+                      <input
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                        type="text"
+                        required
+                        placeholder={t("contact_first")}
+                        name="name"
+                        className="form-int"
+                      />
+                    </Col>
+                    <Col size={12} sm={6} className="px-1">
+                      <input
+                        value={secName}
+                        onChange={(e) => setSecName(e.target.value)}
+                        type="text"
+                        placeholder={t("contact_last")}
+                        name="name"
+                        className="form-int"
+                        required
+                      />
+                    </Col>
+                    <Col size={12} sm={6} className="px-1">
+                      <input
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        type="email"
+                        placeholder={t("contact_em")}
+                        name="user_email"
+                        className="form-int"
+                        required
+                      />
+                    </Col>
+                    <Col size={12} sm={6} className="px-1">
+                      <input
+                        value={number}
+                        onChange={(e) => setNumber(e.target.value)}
+                        type="tel"
+                        placeholder={t("contact_num")}
+                        name="phone"
+                        className="form-int"
+                      />
+                    </Col>
+                    <Col size={12} className="px-1">
+                      <textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        rows="6"
+                        placeholder={t("contact_mes")}
+                        name="message"
+                      ></textarea>
+                      <input
+                        type="submit"
+                        id="button"
+                        className="submit"
+                        value={val}
+                      />
+                    </Col>
+                  </Row>
+                </form>
+              </Slide>
             </div>
           </Col>
         </Row>

@@ -6,6 +6,7 @@ import "./skills.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Progress from "../progress/Progress";
 import { useTranslation } from "react-i18next";
+import { Bounce, Slide } from "react-awesome-reveal";
 
 const Skills = () => {
   const responsive = {
@@ -35,39 +36,47 @@ const Skills = () => {
           <div className="col-12">
             <div>
               <div className="skill-bx" data-wow-delay="0.3s">
-                <h2> {t("nav_skills")}</h2>
-                <p>
-                {t("skills_skillsf")} <br></br>
-                {t("skills_skillss")}
-                </p>
-                <Carousel
-                  responsive={responsive}
-                  infinite={true}
-                  className="owl-carousel owl-theme skill-slider"
-                  autoPlay={true}
-                  swipeable={true}
-                  draggable={true}
-                  autoPlaySpeed={2000}
-                >
-                  <div className="item">
-                    <Progress endValue={90} text="HTML-HTML5" />
+                <Bounce triggerOnce="true" fraction="1">
+                  <div>
+                    <h2> {t("nav_skills")}</h2>
+                    <p>
+                      {t("skills_skillsf")} <br></br>
+                      {t("skills_skillss")}
+                    </p>
                   </div>
-                  <div className="item">
-                    <Progress endValue={85} text="CSS-CSS3" />
+                </Bounce>
+                <Slide triggerOnce="true" direction="right">
+                  <div>
+                    <Carousel
+                      responsive={responsive}
+                      infinite={true}
+                      className="owl-carousel owl-theme skill-slider"
+                      autoPlay={true}
+                      swipeable={true}
+                      draggable={true}
+                      autoPlaySpeed={2000}
+                    >
+                      <div className="item">
+                        <Progress endValue={90} text="HTML-HTML5" />
+                      </div>
+                      <div className="item">
+                        <Progress endValue={85} text="CSS-CSS3" />
+                      </div>
+                      <div className="item">
+                        <Progress endValue={70} text="SASS" />
+                      </div>
+                      <div className="item">
+                        <Progress endValue={65} text="JavaScript" />
+                      </div>
+                      <div className="item">
+                        <Progress endValue={74} text="Bootstrap" />
+                      </div>
+                      <div className="item">
+                        <Progress endValue={78} text="React js" />
+                      </div>
+                    </Carousel>
                   </div>
-                  <div className="item">
-                    <Progress endValue={70} text="SASS" />
-                  </div>
-                  <div className="item">
-                    <Progress endValue={65} text="JavaScript" />
-                  </div>
-                  <div className="item">
-                    <Progress endValue={74} text="Bootstrap" />
-                  </div>
-                  <div className="item">
-                    <Progress endValue={78} text="React js" />
-                  </div>
-                </Carousel>
+                </Slide>
               </div>
             </div>
           </div>

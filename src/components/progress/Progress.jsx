@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// import { Slide } from "react-awesome-reveal";
 import "./progress.css";
 
 const Progress = ({ endValue, text }) => {
@@ -21,12 +22,16 @@ const Progress = ({ endValue, text }) => {
     }
   }, 100);
   return (
-    <div className="counter">
-      <div className="circular-progress" style={style}>
-        <span className="progress-value">{doneState}%</span>
+    <>
+      {/* <Slide triggerOnce="true" direction="up" delay="1000ms"> */}
+      <div className="counter">
+        <div className="circular-progress" style={style}>
+          <span className="progress-value">{doneState}%</span>
+        </div>
+        <span className="text"> {text} </span>
       </div>
-      <span className="text"> {text} </span>
-    </div>
+      {/* </Slide> */}
+    </>
   );
 };
 

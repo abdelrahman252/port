@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Slide } from "react-awesome-reveal";
 import { Col, Row, Alert } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
@@ -24,32 +25,36 @@ const Newsletter = ({ status, message, onValidated }) => {
   const { t } = useTranslation();
   return (
     <Col lg={12}>
-      <div className="newsletter-bx animate__animated animate__slideInUp">
-        <Row>
-          <Col xl={6} sm={12}>
-            <h3>
-              {t("news_f")}
-              <br></br> & {t("news_s")}
-            </h3>
-            {status === "sending" && <Alert>Sending...</Alert>}
-            {status === "error" && <Alert variant="danger">{message}</Alert>}
-            {status === "success" && <Alert variant="success">{message}</Alert>}
-          </Col>
-          <Col xl={6} sm={12}>
-            <form onSubmit={handleSubmit}>
-              <div className="new-email-bx">
-                <input
-                  value={email}
-                  type="email"
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={t("contact_em")}
-                />
-                <button type="submit">{t("news_submit")}</button>
-              </div>
-            </form>
-          </Col>
-        </Row>
-      </div>
+      <Slide direction="up" triggerOnce="true">
+        <div className="newsletter-bx animate__animated animate__slideInUp">
+          <Row>
+            <Col xl={6} sm={12}>
+              <h3>
+                {t("news_f")}
+                <br></br> & {t("news_s")}
+              </h3>
+              {status === "sending" && <Alert>Sending...</Alert>}
+              {status === "error" && <Alert variant="danger">{message}</Alert>}
+              {status === "success" && (
+                <Alert variant="success">{message}</Alert>
+              )}
+            </Col>
+            <Col xl={6} sm={12}>
+              <form onSubmit={handleSubmit}>
+                <div className="new-email-bx">
+                  <input
+                    value={email}
+                    type="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder={t("contact_em")}
+                  />
+                  <button type="submit">{t("news_submit")}</button>
+                </div>
+              </form>
+            </Col>
+          </Row>
+        </div>
+      </Slide>
     </Col>
   );
 };
