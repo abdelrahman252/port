@@ -6,7 +6,7 @@ import "animate.css";
 
 import "./banner.css";
 import { useTranslation } from "react-i18next";
-import {  Slide } from "react-awesome-reveal";
+import { Flip, JackInTheBox, Slide } from "react-awesome-reveal";
 
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -68,20 +68,30 @@ const Banner = () => {
                   <span className="for"> {t("porto4")}</span>
                   <span className="fiv"> {t("porto5")}</span>
                   <span className="six"> {t("porto6")}</span>
-                  <span className="seven">{t("porto7")} </span>{" "}
+                  <span className="seven">{t("porto7")} </span>
                   <span className="eait"> {t("porto8")}</span>
-                  <span className="nine"> {t("porto9")}</span>{" "}
+                  <span className="nine"> {t("porto9")}</span>
                   <span className="ten">{t("porto10")} </span>
-                  <span className="ele">{t("porto11")} </span>{" "}
+                  <span className="ele">
+                    {t("porto11")
+                      .split("/n")
+                      .map((line) => (
+                        <p>{" "}</p>
+                      ))}{" "}
+                  </span>
                   <span className="twe">{t("porto12")}</span>
                   <span className="threet">{t("porto13")} </span>
                   <span className="fourt">{t("porto14")}</span>
                   <span className="fivit">{t("porto15")}</span>
-                  <span className="sixth">{t("porto16")}</span>
+                  <span className="sixth">{t("porto16")} </span>
                   <span className="sevth">{t("porto17")}</span>
                   <span className="eaigh">{t("porto18")}</span>
                   <span className="nint">{t("porto19")}</span>
                   <span className="twent">{t("porto20")}</span>
+                  {/* <span className="twent1">{t("porto21")}</span>
+                  <span className="twent2">{t("porto22")}</span>
+                  <span className="twent3">{t("porto23")}</span>
+                  <span className="twent4">{t("porto24")}</span> */}
                 </div>
 
                 <Slide direction="left" triggerOnce="true" delay="400ms">
@@ -108,9 +118,11 @@ const Banner = () => {
           </Col>
 
           <Col xs={12} md={6} xl={5}>
-            <div className="iamge animate__animated animate__rollIn">
-              <img src={headerImg} alt="Header Img" />
-            </div>
+            <JackInTheBox>
+              <div className="iamge ">
+                <img src={headerImg} alt="Header Img" />
+              </div>
+            </JackInTheBox>
           </Col>
         </Row>
       </Container>

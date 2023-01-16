@@ -75,12 +75,6 @@ const NavBar = () => {
       name: "German",
       country_code: "de",
     },
-    {
-      code: "ar",
-      name: "العربية",
-      dir: "rtl",
-      country_code: "sa",
-    },
   ];
   const { t, i18n } = useTranslation();
 
@@ -101,120 +95,116 @@ const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container className={isActive ? "bg" : "nav-container"}>
-          <Slide direction="right">
-            <Navbar.Brand href="/">
-              <img src={logo_transparent} alt="Logo" />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav">
-              <span className="navbar-toggler-icon " onClick={addClass}></span>
-            </Navbar.Toggle>
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto">
-                <Nav.Link
-                  href="#home"
-                  className={
-                    activeLink === "home" ? "active navbar-link" : "navbar-link"
-                  }
-                  onClick={() => onUpdateActiveLink("home")}
+          <Navbar.Brand href="/">
+            <img src={logo_transparent} alt="Logo" />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <span className="navbar-toggler-icon " onClick={addClass}></span>
+          </Navbar.Toggle>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link
+                href="#home"
+                className={
+                  activeLink === "home" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("home")}
+              >
+                {t("nav_home")}
+              </Nav.Link>
+              <Nav.Link
+                href="#skills"
+                className={
+                  activeLink === "skills" ? "active navbar-link" : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("skills")}
+              >
+                {t("nav_skills")}
+              </Nav.Link>
+              <Nav.Link
+                href="#projects"
+                className={
+                  activeLink === "projects"
+                    ? "active navbar-link"
+                    : "navbar-link"
+                }
+                onClick={() => onUpdateActiveLink("projects")}
+              >
+                {t("nav_projects")}
+              </Nav.Link>
+            </Nav>
+            <div className="navbar-text">
+              <div className="social-icon">
+                <a
+                  href="https://www.linkedin.com/in/abdalrahman-ahmed-024a29230/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {t("nav_home")}
-                </Nav.Link>
-                <Nav.Link
-                  href="#skills"
-                  className={
-                    activeLink === "skills"
-                      ? "active navbar-link"
-                      : "navbar-link"
-                  }
-                  onClick={() => onUpdateActiveLink("skills")}
+                  <img src={navIcon1} alt="" />
+                </a>
+                <a
+                  href="https://www.facebook.com/adbeltahmanahmed/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {t("nav_skills")}
-                </Nav.Link>
-                <Nav.Link
-                  href="#projects"
-                  className={
-                    activeLink === "projects"
-                      ? "active navbar-link"
-                      : "navbar-link"
-                  }
-                  onClick={() => onUpdateActiveLink("projects")}
+                  <img src={navIcon2} alt="" />
+                </a>
+                <a
+                  href="https://www.instagram.com/abdelrahmanahmed2801/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {t("nav_projects")}
-                </Nav.Link>
-              </Nav>
-              <div className="navbar-text">
-                <div className="social-icon">
-                  <a
-                    href="https://www.linkedin.com/in/abdalrahman-ahmed-024a29230/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <img src={navIcon3} alt="" />
+                </a>
+                <a
+                  href="https://wa.me/+201129965148"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={whatsapp} alt="" className="icon" />
+                </a>
+                <a
+                  href="mailto:abdelrahmanahmed.3456@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={mail} alt="" className="icon" />
+                </a>
+              </div>{" "}
+              <HashLink to="#Contact">
+                <button className="vvd">
+                  <span>{t("nav_button")}</span>
+                </button>
+              </HashLink>
+            </div>
+          </Navbar.Collapse>
+
+          <Dropdown style={{ marginLeft: "15px" }}>
+            <Dropdown.Toggle id="dropdown-basic" className="empty">
+              <GlobeIcon />
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              {languages.map(({ code, name, country_code }) => (
+                <li key={country_code}>
+                  <button
+                    className={classNames("dropdown-item", {
+                      disabled: currentLanguageCode === code,
+                    })}
+                    onClick={() => handleChangeLng(code)}
                   >
-                    <img src={navIcon1} alt="" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com/adbeltahmanahmed/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={navIcon2} alt="" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/abdelrahmanahmed2801/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={navIcon3} alt="" />
-                  </a>
-                  <a
-                    href="https://wa.me/+201129965148"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={whatsapp} alt="" className="icon" />
-                  </a>
-                  <a
-                    href="mailto:abdelrahmanahmed.3456@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={mail} alt="" className="icon" />
-                  </a>
-                </div>{" "}
-                <HashLink to="#Contact">
-                  <button className="vvd">
-                    <span>{t("nav_button")}</span>
+                    <span
+                      className={`fi  fi-${country_code} mx-2`}
+                      style={{
+                        opacity: currentLanguageCode === code ? 0.5 : 1,
+                      }}
+                    ></span>
+                    {name}
                   </button>
-                </HashLink>
-              </div>
-            </Navbar.Collapse>
-
-            <Dropdown style={{ marginLeft: "15px" }}>
-              <Dropdown.Toggle id="dropdown-basic" className="empty">
-                <GlobeIcon />
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                {languages.map(({ code, name, country_code }) => (
-                  <li key={country_code}>
-                    <button
-                      className={classNames("dropdown-item", {
-                        disabled: currentLanguageCode === code,
-                      })}
-                      onClick={() => handleChangeLng(code)}
-                    >
-                      <span
-                        className={`fi  fi-${country_code} mx-2`}
-                        style={{
-                          opacity: currentLanguageCode === code ? 0.5 : 1,
-                        }}
-                      ></span>
-                      {name}
-                    </button>
-                  </li>
-                ))}
-              </Dropdown.Menu>
-            </Dropdown>
-          </Slide>
+                </li>
+              ))}
+            </Dropdown.Menu>
+          </Dropdown>
         </Container>
       </Navbar>
     </Router>

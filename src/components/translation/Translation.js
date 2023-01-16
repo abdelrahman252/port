@@ -4,7 +4,6 @@ import { initReactI18next } from "react-i18next";
 // import LanguageDetector from "i18next-browser-languagedetector";
 import en from "../../assets/locales/en/en.json";
 import fr from "../../assets/locales/fr/fr.json";
-import ar from "../../assets/locales/ar/ar.json";
 import sp from "../../assets/locales/sp/sp.json";
 import gm from "../../assets/locales/gm/gm.json";
 i18next
@@ -30,9 +29,6 @@ i18next
       },
       fr: {
         translation: fr,
-      },
-      ar: {
-        translation: ar,
       },
       sp: {
         translation: sp,
