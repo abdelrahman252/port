@@ -29,19 +29,18 @@
 // }
 
 // export default FollowCursor;
-
 import React from "react";
 import AnimatedCursor from "react-animated-cursor";
+const follow = <div className="circle"></div>;
 
 function FollowCursor() {
   return (
-    <div>
-      <AnimatedCursor
-        innerSize={20}
-        outerSize={8}
-
-      />
-    </div>
+    <>
+      {follow}
+      <div>
+        <AnimatedCursor innerSize={20} outerSize={8} />
+      </div>
+    </>
   );
 }
 export default FollowCursor;

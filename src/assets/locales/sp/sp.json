@@ -28,7 +28,7 @@
   "porto22": "l",
   "porto23": "",
   "porto24": "",
-  "banner_head": "Hola! soy abdelrahman♡",
+  "banner_head": " soy abdelrahman♡",
   "banner_text": "Hola! Mi nombre es Abdelrahman Ahmed. Soy un desarrollador web autodidacta apasionado por la programación en general y en especial por el desarrollo web.",
   "rotate": "rotatea",
   "firstrotate": "Web Developer",
@@ -63,5 +63,6 @@
   "pop_hey": "Oye! Parece que te gusta mucho mi portafolio.",
   "pop_wou": "  Te gustaría CONTRATARME?",
   "pop_yes": "sí, contratame!",
-  "pop_no": "NO"
+  "pop_no": "NO",
+  "hi": "Hola!"
 }
