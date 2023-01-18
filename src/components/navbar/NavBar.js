@@ -13,7 +13,6 @@ import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import "./navbar.css";
-import { Slide } from "react-awesome-reveal";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -81,7 +80,6 @@ const NavBar = () => {
   const currentLanguageCode = localStorage.getItem("lng") || "en";
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
   useEffect(() => {
-    console.log("Setting page stuff");
     document.body.dir = currentLanguage.dir || "ltr";
     document.title = t("app_title");
   }, [currentLanguage, t]);

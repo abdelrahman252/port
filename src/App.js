@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import React, { Suspense, lazy } from "react";
 import { useEffect } from "react";
+import FollowCursor from "./components/follow/FollowCursor";
 
 const Navbar = lazy(() => import("./components/navbar/NavBar"));
 const Skills = lazy(() => import("./components/skills/Skills"));
@@ -56,6 +57,7 @@ function App() {
           <Banner />
           <Skills />
           <Projects />
+          <FollowCursor />
           <Contact />
           <Footer />
         </Suspense>

@@ -4,7 +4,7 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 
 import porto from "../../assets/img/PORTO.PNG";
 import shopping from "../../assets/img/shopping.PNG";
-
+import Animation from "../framer/Animation";
 import ai from "../../assets/img/ai.PNG";
 import youtube from "../../assets/img/youtube.PNG";
 import admin from "../../assets/img/admin.PNG";
@@ -261,7 +261,15 @@ const Projects = () => {
           <Col size={12}>
             <Rotate triggerOnce="true">
               <div>
-                <h2> {t("nav_projects")}</h2>
+                <h2>
+                  {t("nav_projects")
+                    .split("")
+                    .map((letter, index) => (
+                      <Animation key={index}>
+                        {letter === " " ? "\u00A0" : letter}
+                      </Animation>
+                    ))}
+                </h2>
                 <p>{t("project_text")}</p>
               </div>
             </Rotate>

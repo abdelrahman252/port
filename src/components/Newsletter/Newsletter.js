@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Slide } from "react-awesome-reveal";
 import { Col, Row, Alert } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import Animation from "../framer/Animation";
 
 const Newsletter = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState("");
@@ -30,8 +31,21 @@ const Newsletter = ({ status, message, onValidated }) => {
           <Row>
             <Col xl={6} sm={12}>
               <h3>
-                {t("news_f")}
-                <br></br> & {t("news_s")}
+                {t("news_f")
+                  .split("")
+                  .map((letter, index) => (
+                    <Animation key={index}>
+                      {letter === " " ? "\u00A0" : letter}
+                    </Animation>
+                  ))}
+                <br></br> &{" "}
+                {t("news_s")
+                  .split("")
+                  .map((letter, index) => (
+                    <Animation key={index}>
+                      {letter === " " ? "\u00A0" : letter}
+                    </Animation>
+                  ))}
               </h3>
               {status === "sending" && <Alert>Sending...</Alert>}
               {status === "error" && <Alert variant="danger">{message}</Alert>}

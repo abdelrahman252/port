@@ -6,8 +6,8 @@ import "animate.css";
 
 import "./banner.css";
 import { useTranslation } from "react-i18next";
-import { Flip, JackInTheBox, Slide } from "react-awesome-reveal";
-
+import { JackInTheBox, Slide } from "react-awesome-reveal";
+import Animation from "../framer/Animation";
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -15,7 +15,7 @@ const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const { t } = useTranslation();
-  const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer"];
+  const toRotate = [" Web Developer", " Web Designer", " UI/UX Designer"];
   const period = 2000;
 
   const tick = () => {
@@ -54,6 +54,7 @@ const Banner = () => {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text]);
+
   return (
     <section className="banner" id="home">
       <Container className="banner-container">
@@ -72,13 +73,7 @@ const Banner = () => {
                   <span className="eait"> {t("porto8")}</span>
                   <span className="nine"> {t("porto9")}</span>
                   <span className="ten">{t("porto10")} </span>
-                  <span className="ele">
-                    {t("porto11")
-                      .split("/n")
-                      .map((line) => (
-                        <p>{" "}</p>
-                      ))}{" "}
-                  </span>
+                  <span className="ele">{t("porto11")}</span>
                   <span className="twe">{t("porto12")}</span>
                   <span className="threet">{t("porto13")} </span>
                   <span className="fourt">{t("porto14")}</span>
@@ -96,20 +91,43 @@ const Banner = () => {
 
                 <Slide direction="left" triggerOnce="true" delay="400ms">
                   <h1>
-                    {t("banner_head")}{" "}
-                    <span
-                      className="txt-rotate"
-                      dataperiod="500"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
-                    >
-                      <span className="wrap">{text}</span>
+                    {t("hi")
+                      .split("")
+                      .map((letter, index) => (
+                        <Animation key={index}>
+                          {letter === " " ? "\u00A0" : letter}
+                        </Animation>
+                      ))}
+                  </h1>
+                  <h1>
+                    {t("banner_head")
+                      .split("")
+                      .map((letter, index) => (
+                        <Animation key={index}>
+                          {letter === " " ? "\u00A0" : letter}
+                        </Animation>
+                      ))}
+                    <span className="txt-rotate">
+                      <span className="wrap">
+                        {text.split("").map((letter, index) => (
+                          <Animation key={index}>
+                            {letter === " " ? "\u00A0" : letter}
+                          </Animation>
+                        ))}
+                      </span>
                     </span>
                   </h1>
                 </Slide>
                 <Slide direction="left" triggerOnce="true">
                   <p>{t("banner_text")}</p>
                   <a href="#Contact" className={t("move")}>
-                    {t("nav_button")}{" "}
+                    {t("nav_button")
+                      .split("")
+                      .map((letter, index) => (
+                        <Animation key={index}>
+                          {letter === " " ? "\u00A0" : letter}
+                        </Animation>
+                      ))}
                     <ArrowRightCircle size={25} className={t("rotate")} />
                   </a>
                 </Slide>

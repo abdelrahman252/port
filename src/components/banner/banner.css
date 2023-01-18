@@ -82,6 +82,11 @@
     }
 }
 
+span {
+    position: relative;
+    display: inline-block;
+}
+
 .txt-rotate>.wrap {
     border-right: 0.08em solid rgba(117, 39, 86, 0.5);
     z-index: 10000;

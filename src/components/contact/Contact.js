@@ -7,6 +7,8 @@ import emailjs from "emailjs-com";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
+import Animation from "../framer/Animation";
+
 const Contact = () => {
   const { t } = useTranslation();
 
@@ -56,7 +58,7 @@ const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <Slide direction="left" triggerOnce="true"  >
+            <Slide direction="left" triggerOnce="true">
               <img
                 className="animate__animated animate__swing"
                 src={contactImg}
@@ -67,7 +69,15 @@ const Contact = () => {
           </Col>
           <Col size={12} md={6}>
             <div className="animate__animated animate__backInRight">
-              <h2>{t("contact_head")}</h2>
+              <h2>
+                {t("contact_head")
+                  .split("")
+                  .map((letter, index) => (
+                    <Animation key={index}>
+                      {letter === " " ? "\u00A0" : letter}
+                    </Animation>
+                  ))}
+              </h2>
               <Slide direction="right" triggerOnce="true">
                 <form onSubmit={handleSubmit}>
                   <Row>

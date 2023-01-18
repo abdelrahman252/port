@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Progress from "../progress/Progress";
 import { useTranslation } from "react-i18next";
 import { Bounce, Slide } from "react-awesome-reveal";
+import Animation from "../framer/Animation";
 
 const Skills = () => {
   const responsive = {
@@ -38,7 +39,16 @@ const Skills = () => {
               <div className="skill-bx" data-wow-delay="0.3s">
                 <Bounce triggerOnce="true" fraction="1">
                   <div>
-                    <h2> {t("nav_skills")}</h2>
+                    <h2>
+                      {" "}
+                      {t("nav_skills")
+                        .split("")
+                        .map((letter, index) => (
+                          <Animation key={index}>
+                            {letter === " " ? "\u00A0" : letter}
+                          </Animation>
+                        ))}
+                    </h2>
                     <p>
                       {t("skills_skillsf")} <br></br>
                       {t("skills_skillss")}
