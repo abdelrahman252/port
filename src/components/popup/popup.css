@@ -229,7 +229,7 @@
     }
 
     .big-pop {
-        top: 50% !important;
+        top: 55% !important;
     }
 
     .pop-text {
@@ -250,7 +250,7 @@
 @media (max-width: 767px) {
   
         .big-pop {
-            top: 58% !important;
+            top: 60% !important;
         }
     
 
@@ -264,7 +264,7 @@
 
 @media (max-width: 1200px) {
     .big-pop {
-        top: 65% ;
+        top: 69% ;
     }
 
     .pop-text {

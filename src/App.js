@@ -57,7 +57,7 @@ function App() {
           <Banner />
           <Skills />
           <Projects />
-          <FollowCursor />
+          {/* <FollowCursor /> */}
           <Contact />
           <Footer />
         </Suspense>
