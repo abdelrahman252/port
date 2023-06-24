@@ -151,10 +151,10 @@
     width: 49px;
     height: 69px;
     background: url("../../assets/img/arm.png");
-    animation: wave 3s infinite ease-in-out;
+    animation: wave 2s infinite ease-in-out;
     transform-origin: 30% 90%;
     z-index: 99999999999;
-    -webkit-animation: wave 3s infinite ease-in-out;
+    -webkit-animation: wave 2s infinite ease-in-out;
 }
 
 .pop .boy .is-shrugging {
