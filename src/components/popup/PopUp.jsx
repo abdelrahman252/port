@@ -36,6 +36,9 @@ const PopUp = ({ setPop }) => {
     setIsHi("translateY(0)");
     setIsSad("translateY(100%)");
   };
+  const leaveClicked = () => {
+    setPop(false);
+  };
   const { t } = useTranslation();
   return (
     <div className="big-pop">
@@ -69,7 +72,7 @@ const PopUp = ({ setPop }) => {
               <div className="pop-btn">
                 <button
                   type="button"
-                  onClick={() => setPop(false)}
+                  onClick={leaveClicked}
                   className="botn no"
                   onMouseEnter={nhover}
                   onMouseLeave={nhoverLeave}

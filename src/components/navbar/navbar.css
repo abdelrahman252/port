@@ -257,6 +257,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
         display: flex !important;
         align-items: center !important;
     }
+
+    .dropLeft {
+        right: 0 !important;
+        left: auto !important;
+    }
 }
 
 nav.navbar .empty {

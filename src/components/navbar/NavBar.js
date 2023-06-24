@@ -182,7 +182,7 @@ const NavBar = () => {
               <GlobeIcon />
             </Dropdown.Toggle>
 
-            <Dropdown.Menu>
+            <Dropdown.Menu className="dropLeft">
               {languages.map(({ code, name, country_code }) => (
                 <li key={country_code}>
                   <button
