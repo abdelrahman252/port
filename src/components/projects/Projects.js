@@ -24,8 +24,8 @@ import era from "../../assets/img/era.PNG";
 import telsa from "../../assets/img/tesla.PNG";
 import tiktok from "../../assets/img/tiktok.PNG";
 import crypto from "../../assets/img/crypto.PNG";
-import wordpress from "../../assets/img/wordpress.PNG";
-import wordpress2 from "../../assets/img/wordpress2.PNG";
+import containerWordpress from "../../assets/img/containerWordpress.png";
+import salaWordpress from "../../assets/img/salaWordpress.png";
 import quiz from "../../assets/img/quiz.PNG";
 import movies from "../../assets/img/movies.PNG";
 import estate from "../../assets/img/estate.PNG";
@@ -205,18 +205,18 @@ const Projects = () => {
   ];
   const pressProjects = [
     {
-      title: "E-Commerce Startup",
+      title: "E-Commerce ",
       description: "Design & Development",
-      imgUrl: wordpress2,
+      imgUrl: containerWordpress,
       Glink: "https://github.com/abdelrahman252/",
-      Llink: "https://solvest.org/",
+      Llink: "https://container-eg.shop/",
     },
     {
-      title: "E-Commerce Startup",
+      title: "E-Commerce ",
       description: "Design & Development",
-      imgUrl: wordpress,
+      imgUrl: salaWordpress,
       Glink: "https://github.com/abdelrahman252/",
-      Llink: "https://tachodx.net/",
+      Llink: "https://sala-sa.shop/",
     },
   ];
   const googleProjects = [
