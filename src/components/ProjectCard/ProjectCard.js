@@ -5,7 +5,7 @@ import "./ProjectCard.css";
 export const ProjectCard = ({ title, description, imgUrl, Glink, Llink }) => {
   return (
     <Col size={12} sm={6} md={4}>
-      <div className="proj-imgbx" >
+      <div className="proj-imgbx">
         <img src={imgUrl} alt={title} />
 
         <div className="proj-txtx">
@@ -14,16 +14,26 @@ export const ProjectCard = ({ title, description, imgUrl, Glink, Llink }) => {
         </div>
 
         <div className="links">
-          <div className="left">
-            <a href={Glink} target="_blank" rel="noopener noreferrer">
+          <a
+            href={Glink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="left"
+          >
+            <div>
               <Github size={40} />
-            </a>
-          </div>
-          <div className="right">
-            <a href={Llink} target="_blank" rel="noopener noreferrer">
+            </div>
+          </a>
+          <a
+            href={Llink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="right"
+          >
+            <div>
               <Globe size={40} />
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </Col>
