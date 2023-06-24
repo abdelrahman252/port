@@ -1,0 +1,236 @@
+/************ Projects Css ************/
+.project {
+    padding: 80px 0;
+    position: relative;
+    background-color: #111;
+    padding: 60px 50px;
+    z-index: 5;
+
+}
+
+.background-image-right {
+    top: 10%;
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    right: 0;
+    z-index: -5;
+}
+
+.project h2 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.project p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px auto 30px auto;
+    text-align: center;
+    width: 56%;
+    text-transform: uppercase;
+}
+
+.project .nav.nav-pills {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: rgb(255 255 255 / 10%);
+    overflow: hidden;
+}
+
+.project .nav.nav-pills .nav-item {
+    width:calc(100% / 6);
+}
+
+
+
+.project .nav.nav-pills .nav-link {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 17px 0;
+    color: #fff;
+    width: 100%;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    z-index: 0;
+}
+
+.project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+
+.more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.load {
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 10px;
+    transition: all .3s linear;
+}
+
+.project .load::before {
+    border-radius: 10px;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+    scale: 0.5;
+}
+
+.load:hover::before {
+    scale: 1;
+    width: 100% !important;
+
+}
+
+.load:hover {
+    scale: 1;
+}
+
+.project .nav.nav-pills .nav-link:hover::before {
+    width: 100% !important;
+}
+
+.project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+}
+
+.project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.nav-link#projects-tabs-tab-first {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 55px 0px 0px 55px;
+}
+
+.nav-link#projects-tabs-tab-second {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.nav-link#projects-tabs-tab-sixth {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.nav-link#projects-tabs-tab-third {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.first{
+    /* border-radius: 0px 0px 55px 0px !important;
+    -webkit-border-radius: 0px 0px 55px 0px !important;
+    -moz-border-radius: 0px 0px 55px 0px !important;
+    -ms-border-radius: 0px 0px 55px 0px !important;
+    -o-border-radius: 0px 0px 55px 0px !important; */
+}
+.nav-link#projects-tabs-tab-forth {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.nav-link#projects-tabs-tab-fifth {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0 55px 55px 0;
+}
+
+
+
+@media (max-width: 567px) {
+    .project .nav.nav-pills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 !important;
+    }
+
+    .project .nav.nav-pills .nav-item {
+        width: 100%;
+    }
+
+    .project .nav.nav-pills .nav-link.active {
+        border: 1px solid rgba(255, 255, 255, 1) !important;
+    }
+
+    .nav-link#projects-tabs-tab-first {
+        border-radius: 0;
+    }
+
+    .nav-link#projects-tabs-tab-fifth {
+        border-radius: 0;
+    }
+
+    .project p {
+        font-size: 18px;
+        margin: 10px auto;
+        text-align: center;
+        width: 80%;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+
+    .project .nav.nav-pills {
+        width: 100% !important;
+    }
+
+  
+
+    .project .nav.nav-pills .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 0px !important;
+    }
+
+    .project .nav.nav-pills .nav-link.active {
+        border: 1px solid rgba(255, 255, 255, 1) !important;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .project .nav.nav-pills {
+        width: 100%;
+        height: fit-content;
+    }
+
+  
+    .project .nav.nav-pills .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px !important;
+    }
+
+    .project .nav.nav-pills .nav-link.active {
+        border: 1px solid rgba(255, 255, 255, 1) !important;
+    }
+}
